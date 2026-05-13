@@ -86,64 +86,82 @@ button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
 /* ========= HERO ========= */
 #hero{
   min-height:100vh;padding-top:72px;
-  background:linear-gradient(rgba(13,33,102,0.87),rgba(13,33,102,0.84)),
-             url('https://images.unsplash.com/photo-1583947582886-f1ec71ded673?w=1800&q=85') center/cover no-repeat;
+  background:linear-gradient(rgba(13,33,102,0.75),rgba(13,33,102,0.85)),
+             url('https://i1.wp.com/test.tirumalesamatrimony.com/wp-content/uploads/2015/11/Maha-Dwaram-Of-The-Tirumala-Temple.jpg?fit=964%2C528') center/cover no-repeat;
   display:flex;flex-direction:column;
+  position:relative;
+}
+#hero::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(13,33,102,0.4),rgba(18,39,112,0.6));
+  z-index:1;
 }
 .hero-body{
   flex:1;max-width:1280px;margin:0 auto;width:100%;
-  display:flex;align-items:center;padding:36px 24px 0;gap:24px;
+  display:flex;align-items:center;padding:40px 32px 0;gap:32px;
+  position:relative;z-index:2;
 }
+
 .hero-left{flex:1.1;min-width:0}
 .hero-right{flex:0.9;display:flex;align-items:flex-end;justify-content:center}
 .hero-right img{
-  max-height:360px;object-fit:contain;
-  filter:drop-shadow(0 20px 50px rgba(0,0,0,0.55));
-  animation:floatY 3.5s ease-in-out infinite;
+  max-height:380px;object-fit:contain;
+  filter:drop-shadow(0 25px 60px rgba(0,0,0,0.4));
+  animation:floatY 4s ease-in-out infinite;
+  border-radius:15px;
+  transform:scale(1.02);
 }
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 
 .hero-h1{
   font-size:clamp(3rem,8vw,5.5rem);font-weight:900;color:#fff;
   line-height:1;margin-bottom:8px;letter-spacing:-1.5px;
+  text-shadow:0 2px 4px rgba(0,0,0,0.3);
 }
-.hero-h1 .tr{color:var(--red2)}
+.hero-h1 .tr{color:var(--red2);text-shadow:0 2px 4px rgba(0,0,0,0.3)}
 .hero-loc{
   font-size:clamp(1rem,2.5vw,1.45rem);font-weight:700;
   color:#fff;letter-spacing:2px;margin-bottom:6px;
+  text-shadow:0 1px 2px rgba(0,0,0,0.3);
 }
 .hero-slogan{
   font-family:'Playfair Display',serif;font-style:italic;
   font-size:clamp(0.95rem,2vw,1.2rem);color:var(--gold);margin-bottom:30px;
+  text-shadow:0 1px 2px rgba(0,0,0,0.3);
 }
-.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px}
 .hbtn{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:11px 22px;border-radius:6px;font-weight:600;font-size:0.88rem;
-  transition:all 0.25s;letter-spacing:0.3px;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 28px;border-radius:8px;font-weight:700;font-size:0.9rem;
+  transition:all 0.3s;letter-spacing:0.5px;
+  text-decoration:none;border:2px solid transparent;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
-.hbtn-navy{background:var(--navy);color:#fff;border:2px solid rgba(255,255,255,0.25)}
-.hbtn-navy:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.5)}
-.hbtn-green{background:var(--green);color:#fff;border:2px solid var(--green)}
-.hbtn-green:hover{background:#1eb855;border-color:#1eb855}
-.hbtn-red{background:var(--red);color:#fff;border:2px solid var(--red)}
-.hbtn-red:hover{background:var(--red2);border-color:var(--red2)}
+.hbtn-navy{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-color:rgba(255,255,255,0.3)}
+.hbtn-navy:hover{background:linear-gradient(135deg,var(--navy2),var(--navy));border-color:rgba(255,255,255,0.5);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.3)}
+.hbtn-green{background:linear-gradient(135deg,var(--green),#1eb855);color:#fff;border-color:var(--green)}
+.hbtn-green:hover{background:linear-gradient(135deg,#1eb855,var(--green));border-color:#1eb855;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,0.4)}
+.hbtn-red{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;border-color:var(--red)}
+.hbtn-red:hover{background:linear-gradient(135deg,var(--red2),var(--red));border-color:var(--red2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(192,40,30,0.4)}
 
 .hero-feats{
   display:flex;flex-wrap:wrap;gap:18px;
-  background:rgba(255,255,255,0.09);
-  border:1px solid rgba(255,255,255,0.18);
-  border-radius:10px;padding:14px 20px;
-  backdrop-filter:blur(8px);
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:15px;padding:20px 24px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.1);
 }
-.hfeat{display:flex;align-items:center;gap:9px;color:#fff}
+.hfeat{display:flex;align-items:center;gap:12px;color:#fff}
 .hfeat-ic{
-  width:34px;height:34px;border-radius:50%;
-  border:1.5px solid rgba(255,255,255,0.45);
+  width:40px;height:40px;border-radius:50%;
+  border:2px solid rgba(255,255,255,0.6);
+  background:rgba(255,255,255,0.1);
   display:flex;align-items:center;justify-content:center;
-  font-size:0.82rem;flex-shrink:0;
+  font-size:0.9rem;flex-shrink:0;
+  backdrop-filter:blur(5px);
 }
-.hfeat span{font-size:0.78rem;font-weight:600}
+.hfeat span{font-size:0.82rem;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,0.3)}
 
 /* ========= COMMON SECTION ========= */
 .sec{padding:68px 0}
@@ -720,7 +738,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
           <div class="col-h">Our Vehicle</div>
         </div>
         <div class="veh-img">
-          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&q=85" alt="Toyota Innova"/>
+          <img src="https://cdn.cars24.com/prod/new-car-cms/Innova_Crysta_Feature_Image_234390a7bc.png" alt="Toyota Innova"/>
           <div class="veh-lbl">Toyota Innova</div>
         </div>
         <div class="vf-grid" style="margin-top:12px">
