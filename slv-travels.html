@@ -58,9 +58,20 @@ button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
 .nav-phone-box{
   display:flex;align-items:center;gap:8px;
   background:var(--navy);border-radius:8px;padding:7px 14px;color:#fff;
+  text-decoration:none;transition:background 0.2s,transform 0.2s;
 }
+.nav-phone-box:hover{background:var(--navy2);transform:translateY(-1px)}
 .nav-phone-box i{color:var(--gold);font-size:0.85rem}
 .nav-phone-box .ph-nums{font-size:0.72rem;font-weight:600;line-height:1.55}
+.nav-book-trip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:9px 14px;border-radius:8px;
+  background:linear-gradient(135deg,var(--red),var(--red2));
+  color:#fff;font-size:0.74rem;font-weight:700;text-decoration:none;
+  box-shadow:0 7px 18px rgba(192,40,30,0.22);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.nav-book-trip:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(192,40,30,0.28)}
 .nav-wa{
   width:36px;height:36px;border-radius:50%;background:var(--green);
   display:flex;align-items:center;justify-content:center;
@@ -85,54 +96,48 @@ button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
 
 /* ========= HERO ========= */
 #hero{
-  min-height:100vh;padding-top:72px;
-  background:linear-gradient(rgba(13,33,102,0.75),rgba(13,33,102,0.85)),
-             url('https://i1.wp.com/test.tirumalesamatrimony.com/wp-content/uploads/2015/11/Maha-Dwaram-Of-The-Tirumala-Temple.jpg?fit=964%2C528') center/cover no-repeat;
-  display:flex;flex-direction:column;
+  min-height:75vh;padding:40px 24px;
+  background-image:linear-gradient(rgba(7,21,44,0.6),rgba(7,21,44,0.6)),
+                   url('https://i1.wp.com/test.tirumalesamatrimony.com/wp-content/uploads/2015/11/Maha-Dwaram-Of-The-Tirumala-Temple.jpg?fit=964%2C528');
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  display:flex;align-items:center;justify-content:center;
   position:relative;
 }
 #hero::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(13,33,102,0.4),rgba(18,39,112,0.6));
-  z-index:1;
+  display:none;
 }
 .hero-body{
-  flex:1;max-width:1280px;margin:0 auto;width:100%;
-  display:flex;align-items:center;padding:40px 32px 0;gap:32px;
+  flex:1;max-width:1100px;margin:0 auto;width:100%;
+  display:flex;align-items:center;justify-content:center;
+  padding:72px 0 24px;gap:0;text-align:center;
   position:relative;z-index:2;
 }
 
-.hero-left{flex:1.1;min-width:0}
-.hero-right{flex:0.9;display:flex;align-items:flex-end;justify-content:center}
-.hero-right img{
-  max-height:380px;object-fit:contain;
-  filter:drop-shadow(0 25px 60px rgba(0,0,0,0.4));
-  animation:floatY 4s ease-in-out infinite;
-  border-radius:15px;
-  transform:scale(1.02);
-}
+.hero-left{flex:1;min-width:0;max-width:720px;margin:0 auto}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 
 .hero-h1{
-  font-size:clamp(3rem,8vw,5.5rem);font-weight:900;color:#fff;
+  font-size:clamp(2.45rem,6vw,4.35rem);font-weight:900;color:#fff;
   line-height:1;margin-bottom:8px;letter-spacing:-1.5px;
   text-shadow:0 2px 4px rgba(0,0,0,0.3);
 }
 .hero-h1 .tr{color:var(--red2);text-shadow:0 2px 4px rgba(0,0,0,0.3)}
 .hero-loc{
-  font-size:clamp(1rem,2.5vw,1.45rem);font-weight:700;
+  font-size:clamp(0.82rem,1.8vw,1.08rem);font-weight:700;
   color:#fff;letter-spacing:2px;margin-bottom:6px;
   text-shadow:0 1px 2px rgba(0,0,0,0.3);
 }
 .hero-slogan{
   font-family:'Playfair Display',serif;font-style:italic;
-  font-size:clamp(0.95rem,2vw,1.2rem);color:var(--gold);margin-bottom:30px;
+  font-size:clamp(0.78rem,1.5vw,0.95rem);color:var(--gold);margin-bottom:24px;
   text-shadow:0 1px 2px rgba(0,0,0,0.3);
 }
-.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px}
+.hero-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:24px}
 .hbtn{
   display:inline-flex;align-items:center;gap:8px;
-  padding:14px 28px;border-radius:8px;font-weight:700;font-size:0.9rem;
+  padding:12px 22px;border-radius:8px;font-weight:700;font-size:0.78rem;
   transition:all 0.3s;letter-spacing:0.5px;
   text-decoration:none;border:2px solid transparent;
   box-shadow:0 4px 15px rgba(0,0,0,0.2);
@@ -145,23 +150,26 @@ button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
 .hbtn-red:hover{background:linear-gradient(135deg,var(--red2),var(--red));border-color:var(--red2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(192,40,30,0.4)}
 
 .hero-feats{
-  display:flex;flex-wrap:wrap;gap:18px;
-  background:rgba(255,255,255,0.12);
-  border:1px solid rgba(255,255,255,0.25);
-  border-radius:15px;padding:20px 24px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 8px 32px rgba(0,0,0,0.1);
+  display:flex;flex-wrap:wrap;justify-content:center;gap:18px;
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:16px;padding:16px 18px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.15);
+  margin:22px auto 0;
+  max-width:690px;
 }
-.hfeat{display:flex;align-items:center;gap:12px;color:#fff}
+.hfeat{display:flex;align-items:center;gap:10px;color:#fff}
 .hfeat-ic{
-  width:40px;height:40px;border-radius:50%;
-  border:2px solid rgba(255,255,255,0.6);
-  background:rgba(255,255,255,0.1);
+  width:38px;height:38px;border-radius:50%;
+  border:2px solid rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.15);
   display:flex;align-items:center;justify-content:center;
-  font-size:0.9rem;flex-shrink:0;
-  backdrop-filter:blur(5px);
+  font-size:1rem;flex-shrink:0;
+  backdrop-filter:blur(8px);
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-.hfeat span{font-size:0.82rem;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,0.3)}
+.hfeat span{font-size:0.72rem;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,0.4);letter-spacing:0.3px}
 
 /* ========= COMMON SECTION ========= */
 .sec{padding:68px 0}
@@ -315,20 +323,30 @@ button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
 .why-item p{font-size:0.8rem;color:#333;font-weight:500}
 
 /* Booking form */
+.booking-card{
+  background:linear-gradient(180deg,#fff,#f8faff);
+  border:1px solid rgba(13,33,102,0.1);
+  border-radius:14px;padding:24px 22px;
+  box-shadow:0 16px 42px rgba(13,33,102,0.1);
+}
+.booking-head{position:relative;text-align:center;margin-bottom:18px}
+.booking-head .col-h{margin-bottom:6px}
+.booking-sub{font-size:0.76rem;color:var(--muted);line-height:1.6}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:9px}
 .finp{
-  width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:7px;
+  width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;
   font-size:0.78rem;font-family:'Poppins',sans-serif;color:#333;
-  background:#fafbff;transition:border-color 0.2s;
+  background:#fff;transition:border-color 0.2s,box-shadow 0.2s;
 }
-.finp:focus{outline:none;border-color:var(--navy);background:#fff}
+.finp:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(13,33,102,0.08)}
 .finp::placeholder{color:#bbb}
 .fsub{
-  width:100%;padding:12px;background:var(--navy);color:#fff;
-  border-radius:7px;font-size:0.86rem;font-weight:700;
+  width:100%;padding:13px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;
+  border-radius:8px;font-size:0.86rem;font-weight:700;
   transition:all 0.3s;letter-spacing:0.5px;margin-top:2px;
+  box-shadow:0 10px 22px rgba(13,33,102,0.18);
 }
-.fsub:hover{background:var(--red);transform:translateY(-2px)}
+.fsub:hover{background:linear-gradient(135deg,var(--red),var(--red2));transform:translateY(-2px)}
 .fsub i{margin-right:6px}
 
 /* ========= REVIEWS ========= */
@@ -458,10 +476,12 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
   .ft-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:800px){
-  .nav-links,.nav-phone-box{display:none}
+  #hero{min-height:75vh;padding:34px 18px}
+  .nav-links,.nav-phone-box,.nav-book-trip{display:none}
   .hamburger{display:flex}
-  .hero-right{display:none}
-  .hero-body{flex-direction:column;padding:18px 18px 0}
+  .hero-body{flex-direction:column;padding:68px 0 24px;text-align:center}
+  .hero-btns{justify-content:center}
+  .hero-feats{justify-content:center}
   .destinations-grid{grid-template-columns:1fr}
   .tcol{grid-template-columns:1fr}
   .rv-grid{grid-template-columns:1fr}
@@ -476,8 +496,13 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
   .destinations-grid{grid-template-columns:1fr}
   .ft-grid{grid-template-columns:1fr}
   .hero-btns{flex-direction:column}
-  .hbtn{justify-content:center}
+  .hbtn{justify-content:center;padding:11px 18px;font-size:0.74rem}
   .frow{grid-template-columns:1fr}
+  .hero-body{padding:64px 0 22px}
+  .hero-h1{font-size:2.4rem}
+  .hero-loc{font-size:0.78rem}
+  .hero-slogan{font-size:0.76rem}
+  .hero-feats{flex-direction:column;gap:14px;padding:16px 14px;margin-top:18px}
 }
 </style>
 </head>
@@ -501,10 +526,11 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <div class="nav-phone-box">
+      <a href="tel:8088007840" class="nav-phone-box" title="Call SLV Travels">
         <i class="fas fa-phone-alt"></i>
         <div class="ph-nums"><span>8088007840</span></div>
-      </div>
+      </a>
+      <a href="#booking" class="nav-book-trip"><i class="fas fa-calendar-check"></i> Book Your Trip</a>
       <a href="https://wa.me/918088007840" class="nav-wa" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       <button class="hamburger" id="ham" onclick="openMenu()"><span></span><span></span><span></span></button>
     </div>
@@ -530,7 +556,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
       <p class="hero-loc">Tirupati &nbsp;|&nbsp; Tirumala</p>
       <p class="hero-slogan">Safe Journey, Happy Journey</p>
       <div class="hero-btns">
-        <a href="#booking" class="hbtn hbtn-navy"><i class="fas fa-calendar-check"></i> Book Now</a>
+        <a href="#booking" class="hbtn hbtn-navy"><i class="fas fa-calendar-check"></i> Book Your Trip</a>
         <a href="https://wa.me/918088007840" class="hbtn hbtn-green" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
         <a href="tel:8088007840" class="hbtn hbtn-red"><i class="fas fa-phone-alt"></i> Call Now</a>
       </div>
@@ -538,11 +564,8 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
         <div class="hfeat"><div class="hfeat-ic"><i class="fas fa-shield-alt"></i></div><span>Safe &amp; Reliable</span></div>
         <div class="hfeat"><div class="hfeat-ic"><i class="fas fa-user-tie"></i></div><span>Experienced Drivers</span></div>
         <div class="hfeat"><div class="hfeat-ic"><i class="far fa-clock"></i></div><span>On Time Service</span></div>
-        <div class="hfeat"><div class="hfeat-ic"><i class="fas fa-rupee-sign"></i></div><span>Affordable Fares</span></div>
+      
       </div>
-    </div>
-    <div class="hero-right">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=85" alt="Toyota Innova – SLV Travels"/>
     </div>
   </div>
 </section>
@@ -763,10 +786,11 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
       </div>
 
       <!-- Book Your Trip -->
-      <div class="rv">
-        <div style="text-align:center;margin-bottom:16px">
+      <div class="rv booking-card">
+        <div class="booking-head">
           <div class="orn" style="justify-content:center"><i class="fas fa-star"></i></div>
           <div class="col-h">Book Your Trip</div>
+          <p class="booking-sub">Share your travel details and get quick confirmation on WhatsApp.</p>
         </div>
         <div class="frow">
           <input type="text" class="finp" id="bName" placeholder="Your Name"/>
