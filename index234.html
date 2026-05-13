@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SLV Travels - Premium Tirupati | Tirumala temple tours, taxi services, packages, and airport transfers." />
+  <meta name="keywords" content="SLV Travels, Tirupati, Tirumala, temple tours, taxi service, pilgrimage packages" />
+  <title>SLV Travels - Tirupati | Tirumala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #031a40;
+      --surface: rgba(255, 255, 255, 0.08);
+      --surface-strong: rgba(255, 255, 255, 0.14);
+      --text: #f7f8fb;
+      --muted: #d6d9e6;
+      --blue: #0b5ed7;
+      --blue-soft: #1a6ed2;
+      --gold: #f5b642;
+      --red: #e14f3d;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(2, 18, 55, 0.28);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top left, rgba(11, 94, 215, 0.16), transparent 30%),
+                  linear-gradient(180deg, #021125 0%, #061b3b 100%);
+      color: var(--text);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      backdrop-filter: blur(18px);
+      background: rgba(2, 16, 45, 0.76);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.45rem;
+      letter-spacing: 1px;
+      color: var(--white);
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: var(--white);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-contact {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-radius: 999px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .nav-contact a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .nav-contact a.btn-primary {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #0b70fc, #1ba0ff);
+      box-shadow: 0 16px 34px rgba(11, 110, 218, 0.3);
+      color: #fff;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0b70fc, #1ba0ff);
+      color: white;
+      padding: 13px 20px;
+      box-shadow: 0 18px 40px rgba(11, 110, 218, 0.35);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 45px rgba(11, 110, 218, 0.35);
+    }
+
+    .hamburger {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--white);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    header {
+      padding-top: 96px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 120px 24px 72px;
+      min-height: calc(100vh - 96px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('https://images.pexels.com/photos/15167632/pexels-photo-15167632.jpeg?cs=srgb&dl=pexels-ramkrishnaiyengar-15167632.jpg&fm=jpg') center/cover no-repeat;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1240px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 32px;
+      box-shadow: 0 40px 120px rgba(2, 18, 55, 0.25);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      padding: 36px;
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      grid-column: 1 / 2;
+      position: relative;
+      z-index: 1;
+      color: #07152c;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1240px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 32px;
+      box-shadow: 0 40px 120px rgba(2, 18, 55, 0.25);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      padding: 36px;
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      grid-column: 1 / 2;
+      position: relative;
+      z-index: 1;
+      color: #07152c;
+    }
+
+    .hero-copy small {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #0b5ed7;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-copy span {
+      display: none;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(3.4rem, 5vw, 5rem);
+      line-height: 0.95;
+      margin: 0;
+      letter-spacing: -0.04em;
+      color: #0f2358;
+    }
+
+    .hero-copy h1 span {
+      color: #de2e32;
+    }
+
+    .hero-copy p.subtitle {
+      margin: 22px 0 18px;
+      font-size: 1.2rem;
+      color: #263750;
+      max-width: 520px;
+    }
+
+    .hero-copy p.tagline {
+      font-size: 1rem;
+      color: #4e5b76;
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+      min-width: 170px;
+    }
+
+    .hero-right {
+      display: grid;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .hero-car-card {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 24px 80px rgba(11, 94, 215, 0.2);
+      padding: 18px;
+    }
+
+    .hero-car-card img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .hero-car-tag {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background: linear-gradient(135deg, #0b5ed7, #1ba0ff);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      box-shadow: 0 18px 36px rgba(11, 94, 215, 0.18);
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .hero-highlights div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f4f8ff;
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: 0 18px 50px rgba(11, 94, 215, 0.08);
+    }
+
+    .hero-highlights i,
+    .hero-info-grid i {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      color: #0b5ed7;
+      background: rgba(11, 94, 215, 0.12);
+      font-size: 1rem;
+    }
+
+    .hero-highlights p,
+    .hero-info-grid p {
+      margin: 0;
+      color: #2f4360;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .hero-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .hero-info-grid div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 16px 16px;
+      border: 1px solid rgba(11, 94, 215, 0.08);
+      color: #263750;
+      font-weight: 700;
+    }
+
+    .hero-info-grid div p {
+      color: #2f4360;
+      font-size: 0.95rem;
+    }
+
+    .hero-copy {
+      grid-column: 1 / span 6;
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+
+    .hero-copy span {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background: rgba(252, 186, 3, 0.16);
+      color: var(--gold);
+      padding: 10px 16px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(3rem, 5vw, 5.4rem);
+      line-height: 0.95;
+      margin: 0;
+      letter-spacing: -0.03em;
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-copy p.subtitle {
+      margin: 18px 0 26px;
+      font-size: clamp(1.06rem, 1.4vw, 1.3rem);
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 560px;
+      animation: fadeUp 1.1s ease forwards;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .hero-copy p.tagline {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 34px;
+      max-width: 520px;
+      animation: fadeUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      animation: fadeUp 1.3s ease forwards;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+      min-width: 150px;
+    }
+
+    .hero-media {
+      grid-column: 7 / span 6;
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      z-index: 1;
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.pexels.com/photos/15167632/pexels-photo-15167632.jpeg?cs=srgb&dl=pexels-ramkrishnaiyengar-15167632.jpg&fm=jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.42);
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(2, 18, 55, 0.38), rgba(0, 0, 0, 0.72));
+      z-index: 0;
+    }
+
+    .hero-vehicle {
+      position: relative;
+      width: 100%;
+      max-width: 550px;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transform: translateY(20px);
+      animation: floatVehicle 6s ease-in-out infinite;
+    }
+
+    .hero-vehicle img {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-info-card {
+      position: absolute;
+      right: 32px;
+      bottom: 44px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(18px);
+      border-radius: 24px;
+      padding: 24px;
+      color: var(--white);
+      max-width: 320px;
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-info-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: var(--gold);
+      letter-spacing: 0.03em;
+    }
+
+    .hero-info-card p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.65;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(2rem, 2.5vw, 2.8rem);
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 620px;
+    }
+
+    .service-grid,
+    .destination-grid,
+    .sight-grid,
+    .gallery-grid,
+    .review-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .section-panel {
+      background: #f6f8ff;
+      border-radius: 36px;
+      padding: 28px;
+      box-shadow: 0 18px 54px rgba(11, 94, 215, 0.08);
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      color: #102240;
+      box-shadow: 0 18px 34px rgba(11, 94, 215, 0.08);
+    }
+
+    .service-card i {
+      background: rgba(11, 94, 215, 0.08);
+      color: #0b5ed7;
+    }
+
+    .service-card h3,
+    .service-card p {
+      color: #102240;
+    }
+
+    .service-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .service-card,
+    .destination-card,
+    .sight-card,
+    .review-card,
+    .feature-card,
+    .contact-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+      backdrop-filter: blur(14px);
+    }
+
+    .service-card:hover,
+    .destination-card:hover,
+    .sight-card:hover,
+    .review-card:hover,
+    .feature-card:hover,
+    .contact-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    .service-card i,
+    .feature-card i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(11, 94, 215, 0.16), rgba(245, 182, 66, 0.18));
+      color: var(--gold);
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3,
+    .destination-card h3,
+    .feature-card h3,
+    .review-card h3,
+    .contact-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.18rem;
+      color: var(--white);
+    }
+
+    .service-card p,
+    .destination-card p,
+    .feature-card p,
+    .review-card p,
+    .contact-card p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.75;
+    }
+
+    .destination-card {
+      overflow: hidden;
+      padding: 0;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .destination-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(3, 11, 28, 0.06), rgba(0, 0, 0, 0.78));
+      opacity: 0.95;
+      transition: opacity 0.35s ease;
+    }
+
+    .destination-card:hover::before {
+      opacity: 0.6;
+    }
+
+    .destination-card .destination-body {
+      position: relative;
+      padding: 26px;
+      z-index: 1;
+    }
+
+    .destination-card small {
+      display: inline-flex;
+      margin-bottom: 14px;
+      font-size: 0.86rem;
+      color: rgba(245, 182, 66, 0.92);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .sight-grid {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .sight-card {
+      padding: 0;
+      overflow: hidden;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .sight-card img {
+      border-radius: 24px;
+      min-height: 260px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .sight-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .sight-card .sight-info {
+      margin-top: 18px;
+    }
+
+    .sight-card h3 {
+      font-size: 1.15rem;
+      margin: 0 0 10px;
+    }
+
+    .vehicle-showcase {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .vehicle-showcase img {
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .vehicle-features {
+      display: grid;
+      gap: 18px;
+    }
+
+    .feature-card {
+      padding: 22px;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .booking-card,
+    .contact-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 32px;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .form-group input,
+    .form-group select {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.25s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: rgba(11, 94, 215, 0.8);
+    }
+
+    .btn-submit {
+      padding: 16px 24px;
+      width: fit-content;
+      min-width: 180px;
+      background: linear-gradient(135deg, #ffb347, #ffcc33);
+      color: #0a112c;
+      box-shadow: 0 18px 38px rgba(245, 182, 66, 0.22);
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.12);
+    }
+
+    .review-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .review-card {
+      padding: 28px;
+    }
+
+    .stars {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 18px;
+      color: #ffd55a;
+    }
+
+    .contact-columns {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .contact-card {
+      min-height: 260px;
+    }
+
+    .contact-card i {
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: rgba(255, 255, 255, 0.78);
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .map-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: var(--shadow);
+      min-height: 420px;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      min-height: 420px;
+    }
+
+    .cta-banner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(11, 94, 215, 0.15), rgba(245, 182, 66, 0.14));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 28px 32px;
+      border-radius: 28px;
+      margin-top: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-banner h3 {
+      margin: 0;
+      font-size: 1.55rem;
+    }
+
+    .footer {
+      background: rgba(2, 14, 32, 0.96);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.74);
+      padding: 40px 24px 28px;
+    }
+
+    .footer-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer h4,
+    .footer .footer-right h4 {
+      margin: 0 0 16px;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .footer-links,
+    .social-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .footer-links a,
+    .social-list a {
+      color: rgba(255, 255, 255, 0.72);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .footer-links a:hover,
+    .social-list a:hover {
+      color: var(--gold);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .social-icons a {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 28px;
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 0.95rem;
+    }
+
+    .whatsapp-float,
+    .scroll-top {
+      position: fixed;
+      right: 24px;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+      color: white;
+      cursor: pointer;
+      z-index: 998;
+      transition: transform 0.25s ease;
+    }
+
+    .whatsapp-float {
+      bottom: 100px;
+      background: linear-gradient(180deg, #25d366 0%, #128c7e 100%);
+    }
+
+    .whatsapp-float:hover,
+    .scroll-top:hover {
+      transform: translateY(-4px);
+    }
+
+    .scroll-top {
+      bottom: 24px;
+      background: linear-gradient(135deg, #0b5ed7, #1ba0ff);
+    }
+
+    .mode-toggle {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      z-index: 998;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 995;
+      background: rgba(1, 11, 27, 0.96);
+      backdrop-filter: blur(20px);
+      padding: 100px 20px 24px;
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+    }
+
+    .mobile-nav.active {
+      transform: translateX(0);
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 24px;
+    }
+
+    .mobile-nav ul a {
+      color: var(--white);
+      font-size: 1.2rem;
+      text-decoration: none;
+      display: block;
+    }
+
+    .mobile-nav-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes floatVehicle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @media (max-width: 1080px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 120px;
+      }
+
+      .hero-copy {
+        grid-column: 1 / -1;
+      }
+
+      .hero-media {
+        grid-column: 1 / -1;
+        min-height: 420px;
+      }
+
+      .vehicle-showcase,
+      .booking-grid,
+      .contact-columns,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .hamburger {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding: 110px 20px 70px;
+      }
+
+      .hero-copy h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero-info-card {
+        right: 18px;
+        left: 18px;
+      }
+
+      .booking-grid,
+      .vehicle-showcase {
+        gap: 20px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .section-head h2 {
+        font-size: 2.3rem;
+      }
+
+      .hero-copy h1 {
+        font-size: 2.8rem;
+      }
+
+      .section-head p,
+      .hero-copy p {
+        font-size: 0.95rem;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .btn-submit {
+        width: 100%;
+      }
+
+      .map-wrapper iframe {
+        min-height: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="topbar">
+      <div class="nav-container">
+        <a class="logo" href="#home"><span>SLV</span> Travels</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#temples">Temple Tours</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-contact">
+            <a href="tel:8088007840"><i class="fas fa-phone-alt"></i> 8088007840</a>
+            <a href="https://wa.me/918088007840" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </nav>
+        <button class="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-nav-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#temples">Temple Tours</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <header id="home">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <small><i class="fas fa-route"></i> Premium Tirupati Pilgrimage</small>
+            <h1>SLV <span>Travels</span></h1>
+            <p class="subtitle">Tirupati | Tirumala</p>
+            <p class="tagline">Safe Journey, Happy Journey</p>
+            <div class="hero-actions">
+              <button class="btn-primary">Book Now</button>
+              <button class="btn-secondary">WhatsApp Booking</button>
+              <button class="btn-secondary">Call Now</button>
+            </div>
+            <div class="hero-highlights">
+              <div><i class="fas fa-shield-alt"></i><p>Safe & Reliable</p></div>
+              <div><i class="fas fa-user-tie"></i><p>Experienced Drivers</p></div>
+              <div><i class="fas fa-wallet"></i><p>Affordable Prices</p></div>
+              <div><i class="fas fa-clock"></i><p>On-Time Service</p></div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="hero-car-card">
+              <div class="hero-car-tag">Toyota Innova</div>
+              <img src="https://images.pexels.com/photos/12252215/pexels-photo-12252215.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Toyota Innova" />
+            </div>
+            <div class="hero-info-grid">
+              <div><i class="fas fa-couch"></i><p>Comfortable Rides</p></div>
+              <div><i class="fas fa-shield-alt"></i><p>Safe & Reliable</p></div>
+              <div><i class="fas fa-user-tie"></i><p>Experienced Drivers</p></div>
+              <div><i class="fas fa-clock"></i><p>On-Time Service</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="services">
+        <div class="section-head">
+          <div>
+            <h2>Our Services</h2>
+            <p>Experience premium pilgrimage transport, flexible packages, and seamless Tirupati temple travel solutions.</p>
+          </div>
+        </div>
+        <div class="section-panel">
+          <div class="service-grid">
+            <article class="service-card">
+              <i class="fas fa-taxi"></i>
+              <h3>Taxi Services</h3>
+              <p>Comfortable cab rides for airport transfers, city commute, and temple sightseeing.</p>
+            </article>
+          <article class="service-card">
+            <i class="fas fa-suitcase-rolling"></i>
+            <h3>Tour Packages</h3>
+            <p>Custom pilgrimage packages crafted for devotion, comfort and stress-free travel.</p>
+          </article>
+          <article class="service-card">
+            <i class="fas fa-plane-arrival"></i>
+            <h3>Airport Pickup & Drop</h3>
+            <p>Reliable airport transfers with clean vehicles and courteous drivers.</p>
+          </article>
+          <article class="service-card">
+            <i class="fas fa-users"></i>
+            <h3>Family & Group Travel</h3>
+            <p>Special arrangements for families and groups with flexible seating and itinerary planning.</p>
+          </article>
+          <article class="service-card">
+            <i class="fas fa-sun"></i>
+            <h3>One Day Trips</h3>
+            <p>Visit Tirumala and surrounding temples with curated one-day tour plans.</p>
+          </article>
+          <article class="service-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Multi-Day Tours</h3>
+            <p>Extended temple tours across South India with comfortable stay and travel support.</p>
+          </article>
+        </div>
+      </div>
+      </section>
+
+      <section id="packages">
+        <div class="section-head">
+          <div>
+            <h2>Temple Destinations</h2>
+            <p>Discover the most sacred pilgrimage spots near Tirupati with premium travel arrangements.</p>
+          </div>
+        </div>
+        <div class="destination-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <article class="destination-card" style="background-image: url('https://images.pexels.com/photos/12752172/pexels-photo-12752172.jpeg?cs=srgb&dl=pexels-pravin-kannah-photography-42707363-12752172.jpg&fm=jpg');">
+            <div class="destination-body">
+              <small>Temple</small>
+              <h3>Tirumala Temple</h3>
+              <p>Spiritual retreat atop the hill for Darshan, rituals, and divine blessings.</p>
+            </div>
+          </article>
+          <article class="destination-card" style="background-image: url('https://images.pexels.com/photos/12752175/pexels-photo-12752175.jpeg?cs=srgb&dl=pexels-pravin-kannah-photography-42707363-12752175.jpg&fm=jpg');">
+            <div class="destination-body">
+              <small>Temple</small>
+              <h3>Srikalahasti</h3>
+              <p>Historic temple famous for Rahu-Ketu worship and elegant dravidian architecture.</p>
+            </div>
+          </article>
+          <article class="destination-card" style="background-image: url('https://images.pexels.com/photos/15167632/pexels-photo-15167632.jpeg?cs=srgb&dl=pexels-ramkrishnaiyengar-15167632.jpg&fm=jpg');">
+            <div class="destination-body">
+              <small>Temple</small>
+              <h3>Kanipakam</h3>
+              <p>Renowned for the self-manifested Ugra Narasimha idol and spiritual miracles.</p>
+            </div>
+          </article>
+          <article class="destination-card" style="background-image: url('https://images.pexels.com/photos/8230166/pexels-photo-8230166.jpeg?cs=srgb&dl=pexels-azharphotography-8230166.jpg&fm=jpg');">
+            <div class="destination-body">
+              <small>Temple</small>
+              <h3>Golden Temple Vellore</h3>
+              <p>Grand temple complex with golden domes, serene gardens, and devotional ambience.</p>
+            </div>
+          </article>
+          <article class="destination-card" style="background-image: url('https://images.pexels.com/photos/36832406/pexels-photo-36832406.jpeg?cs=srgb&dl=pexels-open-borders-36832406.jpg&fm=jpg');">
+            <div class="destination-body">
+              <small>Temple</small>
+              <h3>Arunachalam</h3>
+              <p>Famous hill temple dedicated to Lord Shiva with scenic views and sacred rituals.</p>
+            </div>
+          </article>
+          <article class="destination-card" style="background-image: url('https://images.pexels.com/photos/33633666/pexels-photo-33633666.jpeg?cs=srgb&dl=pexels-sowminee-g-2150687978-33633666.jpg&fm=jpg');">
+            <div class="destination-body">
+              <small>Temple</small>
+              <h3>Kanchi</h3>
+              <p>Ancient spiritual center with historic shrines and rich cultural heritage.</p>
+            </div>
+          </article>
+          <article class="destination-card" style="background-image: url('https://images.pexels.com/photos/36392913/pexels-photo-36392913.jpeg?cs=srgb&dl=pexels-bipulswain-36392913.jpg&fm=jpg');">
+            <div class="destination-body">
+              <small>Temple</small>
+              <h3>Rameshwaram</h3>
+              <p>Nationwide pilgrimage destination on Pamban Island with sacred Kashi Vishwanath.</p>
+            </div>
+          </article>
+          <article class="destination-card" style="background-image: url('https://images.pexels.com/photos/36849512/pexels-photo-36849512.jpeg?cs=srgb&dl=pexels-pavan-prasad-2156671405-36849512.jpg&fm=jpg');">
+            <div class="destination-body">
+              <small>Temple</small>
+              <h3>Srirangam</h3>
+              <p>One of the largest temple complexes in India with Vaishnavite traditions.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="temples">
+        <div class="section-head">
+          <div>
+            <h2>Tirumala Sightseeing</h2>
+            <p>Visit iconic natural wonders and sacred spots around the Tirumala pilgrimage route.</p>
+          </div>
+        </div>
+        <div class="sight-grid">
+          <article class="sight-card">
+            <img src="https://images.pexels.com/photos/8230166/pexels-photo-8230166.jpeg?cs=srgb&dl=pexels-azharphotography-8230166.jpg&fm=jpg" alt="Akasa Ganga" />
+            <div class="sight-info">
+              <h3>Akasa Ganga</h3>
+              <p>Serene temple pathway reflecting sacred traditions and pilgrimage culture.</p>
+            </div>
+          </article>
+          <article class="sight-card">
+            <img src="https://images.pexels.com/photos/12752172/pexels-photo-12752172.jpeg?cs=srgb&dl=pexels-pravin-kannah-photography-42707363-12752172.jpg&fm=jpg" alt="Silathoranam" />
+            <div class="sight-info">
+              <h3>Silathoranam</h3>
+              <p>Historic spiritual landmark with rich temple heritage and devotional energy.</p>
+            </div>
+          </article>
+          <article class="sight-card">
+            <img src="https://images.pexels.com/photos/12752175/pexels-photo-12752175.jpeg?cs=srgb&dl=pexels-pravin-kannah-photography-42707363-12752175.jpg&fm=jpg" alt="Chakra Theertham" />
+            <div class="sight-info">
+              <h3>Chakra Theertham</h3>
+              <p>Holy temple spring with sacred architecture and tranquil pilgrimage moments.</p>
+            </div>
+          </article>
+          <article class="sight-card">
+            <img src="https://images.pexels.com/photos/36832406/pexels-photo-36832406.jpeg?cs=srgb&dl=pexels-open-borders-36832406.jpg&fm=jpg" alt="Papavinasanam" />
+            <div class="sight-info">
+              <h3>Papavinasanam</h3>
+              <p>Historic shrine entrance reflecting sacred rituals and enduring traditions.</p>
+            </div>
+          </article>
+          <article class="sight-card">
+            <img src="https://images.pexels.com/photos/36849512/pexels-photo-36849512.jpeg?cs=srgb&dl=pexels-pavan-prasad-2156671405-36849512.jpg&fm=jpg" alt="Srivari Museum" />
+            <div class="sight-info">
+              <h3>Srivari Museum</h3>
+              <p>Explore sacred treasures, history, and legendary artifacts of the Tirumala temple.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>Vehicle & Comfort</h2>
+            <p>Our Toyota Innova fleet is designed for safety, comfort, and efficient pilgrimage travel.</p>
+          </div>
+        </div>
+        <div class="vehicle-showcase">
+          <img src="https://images.pexels.com/photos/12252215/pexels-photo-12252215.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Toyota Innova" />
+          <div class="vehicle-features">
+            <article class="feature-card"><i class="fas fa-couch"></i><h3>Comfortable Rides</h3><p>Spacious interiors and smooth journeys for every passenger.</p></article>
+            <article class="feature-card"><i class="fas fa-shield-alt"></i><h3>Safe & Reliable</h3><p>Strict sanitization, safety checks, and reliable travel plans.</p></article>
+            <article class="feature-card"><i class="fas fa-user-tie"></i><h3>Experienced Drivers</h3><p>Skilled drivers with local knowledge and courteous service.</p></article>
+            <article class="feature-card"><i class="fas fa-wallet"></i><h3>Affordable Prices</h3><p>Transparent pricing and value packages for all budgets.</p></article>
+            <article class="feature-card"><i class="fas fa-clock"></i><h3>On-Time Service</h3><p>Timely pickups and prompt route planning for your peace of mind.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>Book Your Travel</h2>
+            <p>Reserve your vehicle and temple travel itinerary instantly with our simple booking form.</p>
+          </div>
+        </div>
+        <div class="booking-grid">
+          <div class="booking-card">
+            <form id="bookingForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" placeholder="8088007840" required />
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="pickup">Pickup Location</label>
+                  <input type="text" id="pickup" placeholder="Tirupati / Airport / Hotel" required />
+                </div>
+                <div class="form-group">
+                  <label for="drop">Drop Location</label>
+                  <input type="text" id="drop" placeholder="Tirumala / Temple / Shrine" required />
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="date">Date</label>
+                  <input type="date" id="date" required />
+                </div>
+                <div class="form-group">
+                  <label for="vehicle">Vehicle Type</label>
+                  <select id="vehicle" required>
+                    <option value="Toyota Innova">Toyota Innova</option>
+                    <option value="Tempo Traveller">Tempo Traveller</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="SUV">SUV</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn-submit">Submit Booking</button>
+            </form>
+          </div>
+          <div class="contact-card">
+            <h3>Book with Confidence</h3>
+            <p>SLV Travels offers curated pilgrimage journeys with expert guidance, on-time pickups, and premium cab services.</p>
+            <div class="cta-banner">
+              <div>
+                <h3>Ready to travel?</h3>
+                <p>Call or WhatsApp us for immediate support and personalized temple tour planning.</p>
+              </div>
+              <button class="btn-primary">Contact Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <h2>Customer Reviews</h2>
+            <p>Hear from travelers who experienced premium pilgrimage service with SLV Travels.</p>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3>Excellent trip coordination</h3>
+            <p>Our family felt safe and comfortable during the entire temple tour. Drivers were punctual and the itinerary was perfect.</p>
+          </article>
+          <article class="review-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3>Beautiful travel experience</h3>
+            <p>The vehicle was spotless, and the support team helped us plan a memorable visit to Tirumala and nearby temples.</p>
+          </article>
+          <article class="review-card">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <h3>Professional and reliable</h3>
+            <p>SLV Travels offered excellent service, smooth transfers, and timely pickups. Highly recommended for pilgrimage trips.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <div class="section-head">
+          <div>
+            <h2>Gallery</h2>
+            <p>Browse through our gallery of pilgrimage travel moments, temple visits, and scenic routes.</p>
+          </div>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-item"><img src="https://images.pexels.com/photos/15167632/pexels-photo-15167632.jpeg?cs=srgb&dl=pexels-ramkrishnaiyengar-15167632.jpg&fm=jpg" alt="Temple view" /></article>
+          <article class="gallery-item"><img src="https://images.pexels.com/photos/8230166/pexels-photo-8230166.jpeg?cs=srgb&dl=pexels-azharphotography-8230166.jpg&fm=jpg" alt="Pilgrims" /></article>
+          <article class="gallery-item"><img src="https://images.pexels.com/photos/36392913/pexels-photo-36392913.jpeg?cs=srgb&dl=pexels-bipulswain-36392913.jpg&fm=jpg" alt="Sacred location" /></article>
+          <article class="gallery-item"><img src="https://images.pexels.com/photos/36832406/pexels-photo-36832406.jpeg?cs=srgb&dl=pexels-open-borders-36832406.jpg&fm=jpg" alt="Temple corridor" /></article>
+          <article class="gallery-item"><img src="https://images.pexels.com/photos/36849512/pexels-photo-36849512.jpeg?cs=srgb&dl=pexels-pavan-prasad-2156671405-36849512.jpg&fm=jpg" alt="Night view" /></article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p>Get in touch with SLV Travels for bookings, package details, and travel assistance in Tirupati and Tirumala.</p>
+          </div>
+        </div>
+        <div class="contact-columns">
+          <article class="contact-card">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <p>8088007840<br />7675072985</p>
+          </article>
+          <article class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <p>Tirupati | Tirumala</p>
+          </article>
+          <article class="contact-card">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/918088007840" target="_blank">Chat on WhatsApp</a></p>
+          </article>
+        </div>
+        <div class="map-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12291.44971237029!2d79.06976620721072!3d13.683630492656622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c8c13d4b1a1ed%3A0xf1da96d21c487540!2sTirumala%20Venkateswara%20Temple!5e0!3m2!1sen!2sin!4v1716568057896!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h4>SLV Travels</h4>
+          <p>Your Journey, Our Responsibility. We specialize in premium Tirupati pilgrimage travel and temple tour services.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 SLV Travels. Your Journey, Our Responsibility.</div>
+    </footer>
+
+    <button class="whatsapp-float" onclick="window.open('https://wa.me/918088007840', '_blank')" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </button>
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+    <button class="mode-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <script>
+    const mobileNav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector('.hamburger');
+    const mobileClose = document.querySelector('.mobile-nav-close');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const themeToggle = document.getElementById('themeToggle');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.add('active');
+    });
+
+    mobileClose.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+    });
+
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 450) {
+        scrollTopBtn.style.opacity = '1';
+        scrollTopBtn.style.pointerEvents = 'auto';
+      } else {
+        scrollTopBtn.style.opacity = '0';
+        scrollTopBtn.style.pointerEvents = 'none';
+      }
+
+      document.querySelectorAll('section[id]').forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        const id = section.getAttribute('id');
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const activeLink = document.querySelector(`.nav-links a[href*="${id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const icon = themeToggle.querySelector('i');
+      if (document.body.classList.contains('light-mode')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+    });
+
+    document.getElementById('bookingForm').addEventListener('submit', event => {
+      event.preventDefault();
+      alert('Thank you! Your booking request has been submitted. Our team will contact you shortly.');
+      event.target.reset();
+    });
+
+    (() => {
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (prefersLight) document.body.classList.add('light-mode');
+    })();
+  </script>
+</body>
+</html>
