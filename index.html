@@ -1,1215 +1,1045 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SLV Travels - Premium Tirupati & Tirumala temple tours, car rentals, pilgrimage packages. Safe journey, happy journey!" />
-  <meta name="keywords" content="Tirupati tours, Tirumala travels, temple packages, car rental, pilgrimage" />
-  <title>SLV Travels - Tirupati | Tirumala Tours & Packages</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
-  <style>
-    :root {
-      --primary: #0b5ed7;
-      --secondary: #de2e32;
-      --gold: #f5b642;
-      --light-bg: #f6f8ff;
-      --white: #ffffff;
-      --text-dark: #07152c;
-      --text-gray: #5a6b7d;
-      --border: #e8ebf5;
-      --shadow: 0 10px 30px rgba(11, 94, 215, 0.1);
-      --shadow-lg: 0 20px 60px rgba(11, 94, 215, 0.15);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-
-    /* NAVBAR */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .nav-container {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: var(--text-dark);
-    }
-
-    .logo span {
-      color: var(--primary);
-    }
-
-    .logo em {
-      color: var(--secondary);
-      font-style: normal;
-    }
-
-    .nav-menu {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-menu a {
-      color: var(--text-gray);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-menu a:hover {
-      color: var(--primary);
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .btn {
-      padding: 12px 20px;
-      border: none;
-      border-radius: 20px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #0b70fc, #1ba0ff);
-      color: white;
-      box-shadow: 0 8px 20px rgba(11, 94, 215, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(11, 94, 215, 0.4);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--primary);
-      border: 2px solid var(--primary);
-    }
-
-    .btn-secondary:hover {
-      background: var(--primary);
-      color: white;
-    }
-
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-dark);
-    }
-
-    /* HERO SECTION */
-    .hero {
-      min-height: 75vh;
-      background-image: linear-gradient(rgba(7, 21, 44, 0.6), rgba(7, 21, 44, 0.6)), 
-                        url('https://i1.wp.com/test.tirumalesamatrimony.com/wp-content/uploads/2015/11/Maha-Dwaram-Of-The-Tirumala-Temple.jpg?fit=964%2C528');
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
-    }
-
-    .hero-content {
-      text-align: center;
-      color: white;
-      max-width: 800px;
-    }
-
-    .hero-content h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      line-height: 1.1;
-    }
-
-    .hero-content h1 em {
-      color: var(--gold);
-      font-style: normal;
-    }
-
-    .hero-tagline {
-      font-size: 1.3rem;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 8px;
-      font-weight: 300;
-    }
-
-    .hero-subtitle {
-      font-size: 0.95rem;
-      color: var(--gold);
-      margin-bottom: 32px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    /* SECTION STYLES */
-    section {
-      padding: 80px 24px;
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    .section-title h2 {
-      font-size: 2.5rem;
-      margin-bottom: 12px;
-      color: var(--text-dark);
-    }
-
-    .section-title p {
-      font-size: 1rem;
-      color: var(--text-gray);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* QUICK STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .stat-card {
-      background: var(--light-bg);
-      padding: 20px;
-      border-radius: 16px;
-      text-align: center;
-    }
-
-    .stat-icon {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--text-dark);
-    }
-
-    .stat-label {
-      color: var(--text-gray);
-      font-size: 0.9rem;
-      margin-top: 8px;
-    }
-
-    /* PACKAGES SECTION */
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
-      margin-top: 48px;
-    }
-
-    .package-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .package-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--primary);
-    }
-
-    .package-image {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .package-body {
-      padding: 28px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .package-label {
-      display: inline-block;
-      background: rgba(11, 94, 215, 0.1);
-      color: var(--primary);
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      width: fit-content;
-      text-transform: uppercase;
-    }
-
-    .package-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--text-dark);
-    }
-
-    .package-desc {
-      color: var(--text-gray);
-      margin-bottom: 20px;
-      flex: 1;
-    }
-
-    .package-price {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 16px;
-    }
-
-    .package-features {
-      list-style: none;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-
-    .package-features li {
-      padding: 8px 0;
-      color: var(--text-gray);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .package-features i {
-      color: var(--gold);
-    }
-
-    /* DESTINATIONS */
-    .destinations-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 48px;
-    }
-
-    .destination-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      height: 300px;
-      cursor: pointer;
-      group: "destination";
-    }
-
-    .destination-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .destination-card:hover .destination-image {
-      transform: scale(1.08);
-    }
-
-    .destination-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(7,21,44,0.85) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 24px;
-      color: white;
-    }
-
-    .destination-name {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .destination-highlight {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.8);
-    }
-
-    /* CAR RENTAL SECTION */
-    .rental-showcase {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-      margin-top: 48px;
-    }
-
-    .rental-image {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 20px;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .rental-features {
-      display: grid;
-      gap: 16px;
-    }
-
-    .rental-feature {
-      background: var(--light-bg);
-      padding: 20px;
-      border-radius: 16px;
-      display: flex;
-      gap: 16px;
-    }
-
-    .rental-feature-icon {
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, var(--primary), #1ba0ff);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.4rem;
-      flex-shrink: 0;
-    }
-
-    .rental-feature h4 {
-      margin-bottom: 4px;
-      color: var(--text-dark);
-    }
-
-    .rental-feature p {
-      color: var(--text-gray);
-      font-size: 0.9rem;
-    }
-
-    /* BOOKING SECTION */
-    .booking-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: stretch;
-      margin-top: 48px;
-    }
-
-    .booking-form {
-      background: var(--light-bg);
-      padding: 36px;
-      border-radius: 20px;
-    }
-
-    .booking-form h3 {
-      margin-bottom: 24px;
-      color: var(--text-dark);
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
-
-    .form-group label {
-      font-weight: 600;
-      color: var(--text-dark);
-      font-size: 0.9rem;
-    }
-
-    .form-group input,
-    .form-group select {
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      transition: border-color 0.3s;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--primary);
-    }
-
-    .booking-info {
-      background: var(--white);
-      padding: 36px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .booking-info h3 {
-      margin-bottom: 16px;
-      color: var(--text-dark);
-    }
-
-    .booking-info p {
-      color: var(--text-gray);
-      margin-bottom: 20px;
-    }
-
-    .contact-quick {
-      display: grid;
-      gap: 12px;
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .contact-item i {
-      color: var(--primary);
-      font-size: 1.3rem;
-      width: 30px;
-      text-align: center;
-    }
-
-    .contact-item a {
-      color: var(--text-dark);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    /* TESTIMONIALS */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-      margin-top: 48px;
-    }
-
-    .testimonial-card {
-      background: var(--white);
-      padding: 28px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .stars {
-      color: var(--gold);
-      margin-bottom: 16px;
-      font-size: 1rem;
-    }
-
-    .testimonial-text {
-      color: var(--text-gray);
-      margin-bottom: 16px;
-      line-height: 1.7;
-    }
-
-    .testimonial-author {
-      font-weight: 700;
-      color: var(--text-dark);
-      font-size: 0.95rem;
-    }
-
-    /* GALLERY */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 48px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 16px;
-      height: 250px;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--text-dark);
-      color: rgba(255,255,255,0.8);
-      padding: 60px 24px 24px;
-    }
-
-    .footer-content {
-      max-width: 1240px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    .footer-section h4 {
-      color: white;
-      margin-bottom: 16px;
-      font-size: 1.1rem;
-    }
-
-    .footer-section ul {
-      list-style: none;
-    }
-
-    .footer-section ul li {
-      padding: 6px 0;
-    }
-
-    .footer-section a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer-section a:hover {
-      color: var(--gold);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.6);
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    .social-icons a {
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-    }
-
-    /* FLOATING BUTTONS */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 60px;
-      height: 60px;
-      background: #25d366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.5rem;
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-      text-decoration: none;
-      transition: all 0.3s;
-      z-index: 99;
-    }
-
-    .whatsapp-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-      }
-
-      .hamburger {
-        display: block;
-      }
-
-      .hero-content h1 {
-        font-size: 2.5rem;
-      }
-
-      .rental-showcase,
-      .booking-container {
-        grid-template-columns: 1fr;
-      }
-
-      .rental-image {
-        height: 300px;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 50px 20px;
-      }
-
-      .section-title h2 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>SLV Travels – Tirupati | Tirumala | Safe Journey, Happy Journey</title>
+<meta name="description" content="SLV Travels – Your trusted travel partner for Tirupati, Tirumala and all South India temple destinations."/>
+<meta name="keywords" content="SLV Travels, Tirupati taxi, Tirumala tour, temple tour packages, Tirupati cab"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:#222;background:#fff;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
+
+:root{
+  --navy:#0d2166;
+  --navy2:#122270;
+  --red:#c0281e;
+  --red2:#e53227;
+  --gold:#f0a500;
+  --green:#25d366;
+  --bg:#f5f6fa;
+  --border:#e0e4ef;
+  --muted:#666;
+}
+
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#f0f0f0}
+::-webkit-scrollbar-thumb{background:var(--navy);border-radius:3px}
+
+/* ========= NAVBAR ========= */
+#navbar{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.1);
+  transition:box-shadow 0.3s;
+}
+.nav-inner{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 24px;gap:16px;
+}
+.logo{display:flex;flex-direction:column;line-height:1.15}
+.logo-title{font-size:1.65rem;font-weight:900;letter-spacing:-0.5px}
+.logo-title .sl{color:var(--navy)}
+.logo-title .tr{color:var(--red)}
+.logo-tag{font-size:0.58rem;color:var(--navy);font-weight:500;letter-spacing:1.5px;text-transform:uppercase;opacity:0.75}
+.nav-links{display:flex;align-items:center;gap:26px;flex:1;justify-content:center}
+.nav-links a{font-size:0.87rem;font-weight:500;color:#333;transition:color 0.2s;position:relative;padding-bottom:4px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--navy);transition:width 0.3s;border-radius:1px}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-phone-box{
+  display:flex;align-items:center;gap:8px;
+  background:var(--navy);border-radius:8px;padding:7px 14px;color:#fff;
+  text-decoration:none;transition:background 0.2s,transform 0.2s;
+}
+.nav-phone-box:hover{background:var(--navy2);transform:translateY(-1px)}
+.nav-phone-box i{color:var(--gold);font-size:0.85rem}
+.nav-phone-box .ph-nums{font-size:0.72rem;font-weight:600;line-height:1.55}
+.nav-book-trip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:9px 14px;border-radius:8px;
+  background:linear-gradient(135deg,var(--red),var(--red2));
+  color:#fff;font-size:0.74rem;font-weight:700;text-decoration:none;
+  box-shadow:0 7px 18px rgba(192,40,30,0.22);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.nav-book-trip:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(192,40,30,0.28)}
+.nav-wa{
+  width:36px;height:36px;border-radius:50%;background:var(--green);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.2rem;transition:transform 0.2s;
+}
+.nav-wa:hover{transform:scale(1.1)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:5px}
+.hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px;display:block;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile menu */
+.mob-menu{
+  display:none;position:fixed;inset:0;background:var(--navy);
+  z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:30px;
+}
+.mob-menu.open{display:flex}
+.mob-close{position:absolute;top:20px;right:22px;background:none;color:#fff;font-size:1.5rem}
+.mob-menu a{color:#fff;font-size:1.4rem;font-weight:700;transition:color 0.2s}
+.mob-menu a:hover{color:var(--gold)}
+
+/* ========= HERO ========= */
+#hero{
+  min-height:75vh;padding:40px 24px;
+  background-image:linear-gradient(rgba(7,21,44,0.6),rgba(7,21,44,0.6)),
+                   url('https://i1.wp.com/test.tirumalesamatrimony.com/wp-content/uploads/2015/11/Maha-Dwaram-Of-The-Tirumala-Temple.jpg?fit=964%2C528');
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+#hero::before{
+  display:none;
+}
+.hero-body{
+  flex:1;max-width:1100px;margin:0 auto;width:100%;
+  display:flex;align-items:center;justify-content:center;
+  padding:72px 0 24px;gap:0;text-align:center;
+  position:relative;z-index:2;
+}
+
+.hero-left{flex:1;min-width:0;max-width:720px;margin:0 auto}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+.hero-h1{
+  font-size:clamp(2.45rem,6vw,4.35rem);font-weight:900;color:#fff;
+  line-height:1;margin-bottom:8px;letter-spacing:-1.5px;
+  text-shadow:0 2px 4px rgba(0,0,0,0.3);
+}
+.hero-h1 .tr{color:var(--red2);text-shadow:0 2px 4px rgba(0,0,0,0.3)}
+.hero-loc{
+  font-size:clamp(0.82rem,1.8vw,1.08rem);font-weight:700;
+  color:#fff;letter-spacing:2px;margin-bottom:6px;
+  text-shadow:0 1px 2px rgba(0,0,0,0.3);
+}
+.hero-slogan{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(0.78rem,1.5vw,0.95rem);color:var(--gold);margin-bottom:24px;
+  text-shadow:0 1px 2px rgba(0,0,0,0.3);
+}
+.hero-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:24px}
+.hbtn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:8px;font-weight:700;font-size:0.78rem;
+  transition:all 0.3s;letter-spacing:0.5px;
+  text-decoration:none;border:2px solid transparent;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+.hbtn-navy{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-color:rgba(255,255,255,0.3)}
+.hbtn-navy:hover{background:linear-gradient(135deg,var(--navy2),var(--navy));border-color:rgba(255,255,255,0.5);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.3)}
+.hbtn-green{background:linear-gradient(135deg,var(--green),#1eb855);color:#fff;border-color:var(--green)}
+.hbtn-green:hover{background:linear-gradient(135deg,#1eb855,var(--green));border-color:#1eb855;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,0.4)}
+.hbtn-red{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;border-color:var(--red)}
+.hbtn-red:hover{background:linear-gradient(135deg,var(--red2),var(--red));border-color:var(--red2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(192,40,30,0.4)}
+
+.hero-feats{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:18px;
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:16px;padding:16px 18px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.15);
+  margin:22px auto 0;
+  max-width:690px;
+}
+.hfeat{display:flex;align-items:center;gap:10px;color:#fff}
+.hfeat-ic{
+  width:38px;height:38px;border-radius:50%;
+  border:2px solid rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+  backdrop-filter:blur(8px);
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.hfeat span{font-size:0.72rem;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,0.4);letter-spacing:0.3px}
+
+/* ========= COMMON SECTION ========= */
+.sec{padding:68px 0}
+.sec-light{background:var(--bg)}
+.sec-navy{background:var(--navy)}
+.ctr{max-width:1280px;margin:0 auto;padding:0 24px}
+
+.sh{text-align:center;margin-bottom:44px}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:5px}
+.orn::before,.orn::after{content:'';flex:0 0 55px;height:2px}
+.orn::before{background:linear-gradient(90deg,transparent,var(--gold))}
+.orn::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.orn i{color:var(--gold);font-size:0.7rem}
+.sh h2{font-size:clamp(1.3rem,2.8vw,1.8rem);font-weight:800;color:var(--navy);letter-spacing:1px;text-transform:uppercase}
+.sh.wh h2{color:#fff}
+.sh p{color:var(--muted);font-size:0.84rem;margin-top:7px}
+.sh.wh p{color:rgba(255,255,255,0.6)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 0.55s ease,transform 0.55s ease}
+.rv.vis{opacity:1;transform:none}
+
+/* ========= SERVICES ========= */
+.srv-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.srv{
+  background:#fff;border:1.5px solid var(--border);border-radius:10px;
+  padding:26px 14px 20px;text-align:center;transition:all 0.3s;
+  position:relative;overflow:hidden;
+}
+.srv::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--navy),var(--gold));
+  transform:scaleX(0);transition:transform 0.3s;transform-origin:left;
+}
+.srv:hover{transform:translateY(-8px);box-shadow:0 14px 36px rgba(13,33,102,0.13);border-color:var(--navy)}
+.srv:hover::after{transform:scaleX(1)}
+.srv-ic{
+  width:56px;height:56px;border-radius:12px;
+  background:rgba(13,33,102,0.08);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 12px;transition:all 0.3s;
+}
+.srv-ic i{font-size:1.35rem;color:var(--navy);transition:all 0.3s}
+.srv:hover .srv-ic{background:var(--navy)}
+.srv:hover .srv-ic i{color:var(--gold)}
+.srv h3{font-size:0.78rem;font-weight:700;color:var(--navy);margin-bottom:5px;line-height:1.35}
+.srv p{font-size:0.7rem;color:var(--muted);line-height:1.6}
+
+/* ========= TEMPLE DESTINATIONS ========= */
+.tmpl-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:10px}
+.tc{
+  border:1.5px solid var(--border);border-radius:10px;overflow:hidden;
+  background:#fff;transition:all 0.3s;
+}
+.tc:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(13,33,102,0.14);border-color:var(--navy)}
+.tc-img{height:105px;overflow:hidden}
+.tc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.tc:hover .tc-img img{transform:scale(1.1)}
+.tc-name{
+  padding:7px 7px 9px;font-size:0.68rem;font-weight:700;
+  color:var(--navy);text-align:center;line-height:1.35;
+}
+
+/* ========= SIGHTSEEING ========= */
+.sg-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sc{border-radius:10px;overflow:hidden;position:relative;cursor:pointer;border:1px solid rgba(255,255,255,0.1)}
+.sc img{width:100%;height:155px;object-fit:cover;display:block;transition:transform 0.4s}
+.sc:hover img{transform:scale(1.09)}
+.sc-lbl{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(13,33,102,0.88),transparent);
+  color:#fff;font-size:0.75rem;font-weight:700;
+  padding:22px 10px 8px;text-align:center;
+}
+
+/* ========= DESTINATIONS ========= */
+.destinations-section{
+  background:linear-gradient(rgba(7,21,44,0.6),rgba(7,21,44,0.6));
+  padding:68px 0;
+  color:#fff;
+}
+.destinations-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+  max-width:1280px;margin:0 auto;padding:0 24px;
+}
+.destination-card{
+  position:relative;border-radius:12px;overflow:hidden;
+  height:280px;cursor:pointer;transition:all 0.3s;
+  box-shadow:0 8px 24px rgba(0,0,0,0.25);
+}
+.destination-card:hover{transform:translateY(-8px);box-shadow:0 12px 36px rgba(0,0,0,0.35)}
+.destination-image{
+  width:100%;height:100%;object-fit:cover;transition:transform 0.4s;
+}
+.destination-card:hover .destination-image{transform:scale(1.08)}
+.destination-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,33,102,0.3),rgba(13,33,102,0.85));
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  padding:24px;text-align:center;color:#fff;
+}
+.destination-name{
+  font-size:1.05rem;font-weight:800;margin-bottom:6px;letter-spacing:0.5px;
+}
+.destination-highlight{
+  font-size:0.8rem;color:rgba(255,255,255,0.85);font-style:italic;
+}
+
+/* ========= FLEET ========= */
+.fleet-section{
+  background:linear-gradient(135deg,var(--light-bg) 0%,#eef2ff 100%);
+  padding:68px 0;
+}
+.fleet-featured{margin:0 auto 60px;max-width:1280px;padding:0 24px}
+.fleet-featured-card{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+}
+.fleet-featured-image{
+  border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:#fff;
+}
+.fleet-featured-image img{
+  width:100%;height:400px;object-fit:contain;object-position:center;background:#fff;
+}
+.fleet-featured-copy h3{
+  font-size:1.6rem;font-weight:800;color:var(--navy);margin:16px 0;text-transform:uppercase;
+}
+.fleet-featured-copy p{
+  color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:20px;
+}
+.fleet-featured-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fleet-featured-list div{
+  display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--navy);font-weight:600;
+}
+.fleet-featured-list i{color:var(--gold);font-size:1rem}
+.fleet-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+  max-width:1280px;margin:0 auto;padding:0 24px;
+}
+.vehicle-card{
+  background:#fff;border-radius:12px;overflow:hidden;
+  box-shadow:0 4px 16px rgba(13,33,102,0.08);
+  transition:all 0.3s;
+}
+.vehicle-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(13,33,102,0.15)}
+.vehicle-img-box{border-radius:12px;overflow:hidden;margin-bottom:16px}
+.vehicle-img-box img{width:100%;height:220px;object-fit:cover}
+
+/* ========= THREE-COL LAYOUT ========= */
+.tcol{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:start}
+
+/* Vehicle */
+.veh-img{position:relative;margin-bottom:14px}
+.veh-img img{width:100%;border-radius:10px;box-shadow:0 8px 28px rgba(13,33,102,0.12)}
+.veh-lbl{
+  position:absolute;top:-9px;right:10px;
+  background:var(--red);color:#fff;
+  font-size:0.65rem;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:0.5px;
+}
+.col-h{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:14px;text-align:center;text-transform:uppercase;letter-spacing:0.5px}
+.vf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vf-item{display:flex;align-items:center;gap:7px;font-size:0.76rem;color:#333;font-weight:500}
+.vf-item i{color:var(--navy);background:rgba(13,33,102,0.09);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0}
+
+/* Why col */
+.why-item{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.why-ic{
+  width:30px;height:30px;border-radius:50%;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:0.75rem;flex-shrink:0;
+}
+.why-item p{font-size:0.8rem;color:#333;font-weight:500}
+
+/* Booking form */
+.booking-card{
+  background:linear-gradient(180deg,#fff,#f8faff);
+  border:1px solid rgba(13,33,102,0.1);
+  border-radius:14px;padding:24px 22px;
+  box-shadow:0 16px 42px rgba(13,33,102,0.1);
+}
+.booking-head{position:relative;text-align:center;margin-bottom:18px}
+.booking-head .col-h{margin-bottom:6px}
+.booking-sub{font-size:0.76rem;color:var(--muted);line-height:1.6}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:9px}
+.finp{
+  width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;
+  font-size:0.78rem;font-family:'Poppins',sans-serif;color:#333;
+  background:#fff;transition:border-color 0.2s,box-shadow 0.2s;
+}
+.finp:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(13,33,102,0.08)}
+.finp::placeholder{color:#bbb}
+.fsub{
+  width:100%;padding:13px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;
+  border-radius:8px;font-size:0.86rem;font-weight:700;
+  transition:all 0.3s;letter-spacing:0.5px;margin-top:2px;
+  box-shadow:0 10px 22px rgba(13,33,102,0.18);
+}
+.fsub:hover{background:linear-gradient(135deg,var(--red),var(--red2));transform:translateY(-2px)}
+.fsub i{margin-right:6px}
+
+/* ========= REVIEWS ========= */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rvc{
+  background:#fff;border:1.5px solid var(--border);border-radius:12px;
+  padding:22px 20px;transition:all 0.3s;
+  box-shadow:0 2px 10px rgba(13,33,102,0.05);position:relative;
+}
+.rvc:hover{transform:translateY(-6px);box-shadow:0 14px 36px rgba(13,33,102,0.1);border-color:var(--navy)}
+.rvc::before{
+  content:'\201C';font-size:4rem;font-family:'Playfair Display',serif;
+  color:var(--gold);opacity:0.15;position:absolute;top:8px;left:14px;line-height:1;
+}
+.stars{color:var(--gold);font-size:0.82rem;letter-spacing:2px;margin-bottom:10px}
+.rv-txt{font-size:0.8rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-style:italic}
+.rv-user{display:flex;align-items:center;gap:10px}
+.rv-av{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:0.95rem;flex-shrink:0;border:2px solid var(--gold);
+}
+.rv-name{font-weight:700;font-size:0.82rem;color:var(--navy)}
+.rv-sub{font-size:0.7rem;color:var(--muted)}
+
+/* ========= CONTACT ========= */
+.ct-grid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:24px;align-items:start}
+.ctc{
+  background:#fff;border:1.5px solid var(--border);border-radius:12px;
+  padding:26px 20px;text-align:center;
+  box-shadow:0 2px 10px rgba(13,33,102,0.05);
+}
+.ct-ic{
+  width:50px;height:50px;border-radius:12px;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:1.15rem;margin:0 auto 12px;
+}
+.ctc h3{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+.ctc a,.ctc p{font-size:0.82rem;color:var(--muted);line-height:1.9}
+.ctc a{color:var(--navy);font-weight:600;transition:color 0.2s}
+.ctc a:hover{color:var(--red)}
+.map-if{width:100%;height:175px;border:none;border-radius:8px;margin-top:8px}
+.wa-btn-cta{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--green);color:#fff;
+  padding:11px 22px;border-radius:30px;font-weight:700;font-size:0.85rem;
+  margin-top:12px;transition:all 0.3s;box-shadow:0 4px 14px rgba(37,211,102,0.3);
+}
+.wa-btn-cta:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(37,211,102,0.45)}
+
+/* ========= FOOTER ========= */
+footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
+.ft-grid{display:grid;grid-template-columns:1.8fr 1fr 1.2fr 1fr;gap:38px;margin-bottom:38px}
+.ft-brand .logo-title .sl{color:#fff}
+.ft-brand .logo-title .tr{color:var(--gold)}
+.ft-brand .logo-tag{color:var(--gold);opacity:1;margin-bottom:10px;display:block;margin-top:2px}
+.ft-brand p{font-size:0.76rem;line-height:1.85;color:rgba(255,255,255,0.52);margin-top:8px;max-width:255px}
+.ft-col h4{color:var(--gold);font-size:0.76rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:15px}
+.ft-col ul li{margin-bottom:8px}
+.ft-col ul li a{font-size:0.78rem;color:rgba(255,255,255,0.58);transition:color 0.2s;display:flex;align-items:center;gap:5px}
+.ft-col ul li a:hover{color:var(--gold)}
+.ft-col ul li a::before{content:'›';color:var(--gold);font-size:0.9rem}
+.soc-row{display:flex;gap:9px;margin-top:15px}
+.soc-lnk{
+  width:33px;height:33px;border-radius:8px;
+  border:1px solid rgba(255,255,255,0.2);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.58);font-size:0.88rem;transition:all 0.3s;
+}
+.soc-lnk:hover{transform:translateY(-3px)}
+.soc-lnk.fb:hover{background:#1877f2;border-color:#1877f2;color:#fff}
+.soc-lnk.ig:hover{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);border-color:transparent;color:#fff}
+.soc-lnk.yt:hover{background:#ff0000;border-color:#ff0000;color:#fff}
+.soc-lnk.wa:hover{background:var(--green);border-color:var(--green);color:#fff}
+.ft-bot{
+  border-top:1px solid rgba(255,255,255,0.1);padding:16px 24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+}
+.ft-bot p{font-size:0.73rem;color:rgba(255,255,255,0.38)}
+.ft-motto{color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:0.87rem}
+.ft-up{
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,0.1);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:0.82rem;transition:all 0.3s;border:none;
+}
+.ft-up:hover{background:var(--gold);color:var(--navy)}
+
+/* ========= FLOATERS ========= */
+.fl-wa{
+  position:fixed;bottom:76px;right:18px;z-index:800;
+  width:50px;height:50px;border-radius:50%;background:var(--green);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
+  box-shadow:0 4px 18px rgba(37,211,102,0.4);animation:wap 2s infinite;transition:transform 0.3s;
+}
+.fl-wa:hover{transform:scale(1.12)}
+@keyframes wap{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 32px rgba(37,211,102,0.68)}}
+.fl-top{
+  position:fixed;bottom:18px;right:18px;z-index:800;
+  width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:0.88rem;
+  opacity:0;pointer-events:none;transition:all 0.3s;cursor:pointer;border:none;
+  box-shadow:0 4px 14px rgba(13,33,102,0.3);
+}
+.fl-top.on{opacity:1;pointer-events:all}
+.fl-top:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}
+
+/* Toast */
+.toast{
+  position:fixed;top:82px;right:18px;z-index:2000;
+  background:var(--navy);color:#fff;padding:12px 20px;border-radius:10px;
+  font-size:0.82rem;font-weight:600;border-left:4px solid var(--gold);
+  box-shadow:0 6px 24px rgba(0,0,0,0.18);
+  transform:translateX(130%);transition:transform 0.4s;
+}
+.toast.on{transform:translateX(0)}
+
+/* ========= RESPONSIVE ========= */
+@media(max-width:1100px){
+  .srv-grid{grid-template-columns:repeat(3,1fr)}
+  .tmpl-grid{grid-template-columns:repeat(4,1fr)}
+  .sg-grid{grid-template-columns:repeat(3,1fr)}
+  .destinations-grid{grid-template-columns:repeat(2,1fr)}
+  .tcol{grid-template-columns:1fr 1fr;row-gap:28px}
+  .tcol .vc{grid-column:1/-1}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:800px){
+  #hero{min-height:75vh;padding:34px 18px}
+  .nav-links,.nav-phone-box,.nav-book-trip{display:none}
+  .hamburger{display:flex}
+  .sec,.fleet-section,.destinations-section{padding:48px 0}
+  .ctr{padding:0 16px}
+  .sh{margin-bottom:28px}
+  .sh h2{font-size:1.25rem;line-height:1.3}
+  .orn::before,.orn::after{flex-basis:36px}
+  .hero-body{flex-direction:column;padding:68px 0 24px;text-align:center}
+  .hero-btns{justify-content:center}
+  .hero-feats{justify-content:center}
+  .srv-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .tmpl-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .tc-img{height:140px}
+  .sg-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .sc img{height:170px}
+  .destinations-grid{grid-template-columns:1fr}
+  .destination-card{height:230px}
+  .destination-overlay{padding:18px}
+  .destination-name{font-size:0.95rem}
+  .destination-highlight{font-size:0.74rem}
+  .fleet-featured{padding:0 16px;margin-bottom:38px}
+  .fleet-featured-card{grid-template-columns:1fr;gap:22px}
+  .fleet-featured-image{border-radius:14px}
+  .fleet-featured-image img{height:auto;min-height:0;object-fit:contain}
+  .fleet-featured-copy{text-align:center}
+  .fleet-featured-copy .orn{justify-content:center!important}
+  .fleet-featured-copy h3{font-size:1.25rem;margin:12px 0}
+  .fleet-featured-copy p{font-size:0.84rem;line-height:1.7;margin-bottom:16px}
+  .fleet-featured-list{grid-template-columns:1fr;gap:10px}
+  .fleet-featured-list div{justify-content:center;font-size:0.8rem}
+  .fleet-grid{grid-template-columns:1fr;padding:0 16px;gap:18px}
+  .vehicle-img-box img{height:auto}
+  .veh-img img{height:auto;object-fit:contain}
+  .vf-grid{grid-template-columns:1fr}
+  .tcol{grid-template-columns:1fr}
+  .rv-grid{grid-template-columns:1fr}
+  .ct-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .ft-bot{flex-direction:column;text-align:center}
+}
+@media(max-width:520px){
+  .srv-grid{grid-template-columns:1fr}
+  .srv{padding:22px 16px 18px}
+  .srv h3{font-size:0.84rem}
+  .srv p{font-size:0.74rem}
+  .tmpl-grid{grid-template-columns:1fr}
+  .tc-img{height:190px}
+  .tc-name{font-size:0.78rem;padding:10px}
+  .sg-grid{grid-template-columns:1fr}
+  .sc img{height:210px}
+  .destinations-grid{grid-template-columns:1fr}
+  .destination-card{height:220px}
+  .destinations-grid,.fleet-grid{padding:0 16px}
+  .ft-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .hbtn{justify-content:center;padding:11px 18px;font-size:0.74rem;width:100%;max-width:320px;margin:0 auto}
+  .frow{grid-template-columns:1fr}
+  .hero-body{padding:64px 0 22px}
+  .hero-h1{font-size:2.4rem}
+  .hero-loc{font-size:0.78rem}
+  .hero-slogan{font-size:0.76rem}
+  .hero-feats{flex-direction:column;gap:14px;padding:16px 14px;margin-top:18px}
+  .booking-card{padding:20px 16px}
+  .map-if{height:220px}
+}
+</style>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo"><span>SLV</span> <em>Travels</em></div>
-      <ul class="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#packages">Packages</a></li>
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#rentals">Car Rentals</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-buttons">
-        <a href="tel:8088007840" class="btn btn-secondary"><i class="fas fa-phone"></i> Call</a>
-        <a href="https://wa.me/918088007840" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <button class="hamburger"><i class="fas fa-bars"></i></button>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:7px"></i>Booking request sent via WhatsApp!</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">
+      <div class="logo-title"><span class="sl">SLV</span> <span class="tr">Travels</span></div>
+      <div class="logo-tag">Safe Journey, Happy Journey</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#fleet">Fleet</a></li>
+      <li><a href="#booking">Packages</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:8088007840" class="nav-phone-box" title="Call SLV Travels">
+        <i class="fas fa-phone-alt"></i>
+        <div class="ph-nums"><span>8088007840</span></div>
+      </a>
+      <a href="#booking" class="nav-book-trip"><i class="fas fa-calendar-check"></i> Book Your Trip</a>
+      <a href="https://wa.me/918088007840" class="nav-wa" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <button class="hamburger" id="ham" onclick="openMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMenu()"><i class="fas fa-times"></i></button>
+  <a href="#hero" onclick="closeMenu()">Home</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#destinations" onclick="closeMenu()">Destinations</a>
+  <a href="#fleet" onclick="closeMenu()">Fleet</a>
+  <a href="#booking" onclick="closeMenu()">Packages</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-body">
+    <div class="hero-left">
+      <h1 class="hero-h1">SLV <span class="tr">Travels</span></h1>
+      <p class="hero-loc">Tirupati &nbsp;|&nbsp; Tirumala</p>
+      <p class="hero-slogan">Safe Journey, Happy Journey</p>
+      <div class="hero-btns">
+        <a href="#booking" class="hbtn hbtn-navy"><i class="fas fa-calendar-check"></i> Book Your Trip</a>
+        <a href="https://wa.me/918088007840" class="hbtn hbtn-green" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
+        <a href="tel:8088007840" class="hbtn hbtn-red"><i class="fas fa-phone-alt"></i> Call Now</a>
+      </div>
+      <div class="hero-feats">
+        <div class="hfeat"><div class="hfeat-ic"><i class="fas fa-shield-alt"></i></div><span>Safe &amp; Reliable</span></div>
+        <div class="hfeat"><div class="hfeat-ic"><i class="fas fa-user-tie"></i></div><span>Experienced Drivers</span></div>
+        <div class="hfeat"><div class="hfeat-ic"><i class="far fa-clock"></i></div><span>On Time Service</span></div>
+      
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-subtitle">Welcome to SLV Travels</div>
-      <h1>SLV <em>Travels</em></h1>
-      <p class="hero-tagline">Tirupati | Tirumala</p>
-      <p class="hero-tagline" style="font-size: 1rem; color: var(--gold); margin-bottom: 24px;">Safe Journey, Happy Journey</p>
-      <div class="hero-buttons">
-        <button class="btn btn-primary">Book Now</button>
-        <button class="btn btn-secondary">Explore Packages</button>
+<!-- ===== SERVICES ===== -->
+<section id="services" class="sec sec-light">
+  <div class="ctr">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Our Services</h2>
+    </div>
+    <div class="srv-grid">
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-car"></i></div><h3>Taxi Services</h3><p>Comfortable and reliable taxi services.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-map-marked-alt"></i></div><h3>Tour Packages</h3><p>Affordable and customized tour packages.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-plane-arrival"></i></div><h3>Airport Pickup &amp; Drop</h3><p>On-time airport transfers with safe travel.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-users"></i></div><h3>Family &amp; Group Travel</h3><p>Spacious vehicles for family and group travel.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-sun"></i></div><h3>One Day Trips</h3><p>Enjoy quick spiritual and sightseeing tours.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-route"></i></div><h3>Multi-Day Tours</h3><p>Complete South India temple tour experiences.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEMPLE DESTINATIONS ===== -->
+<section id="temples" class="sec">
+  <div class="ctr">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Temple Destinations</h2>
+    </div>
+    <div class="tmpl-grid">
+      <div class="tc rv"><div class="tc-img"><img src="https://3.imimg.com/data3/AO/CK/MDC-5726533/cityimages-115-130-1356519843-500x500.jpg" alt="Tirumala"/></div><div class="tc-name">Tirumala Temple</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://www.saiprashnavali.com/wp-content/uploads/2020/04/Srikalahasti-Temple-Timings.jpg" alt="Srikalahasti"/></div><div class="tc-name">Srikalahasti</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://live.staticflickr.com/5634/22472587031_14c3aa84f4_b.jpg" alt="Kanipakam"/></div><div class="tc-name">Kanipakam</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://famoustemplesofindia.com/wp-content/uploads/2024/06/Golden-Temple-Vellore-1-1024x768.jpg" alt="Golden Temple"/></div><div class="tc-name">Golden Temple Vellore</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://www.templepurohit.com/wp-content/uploads/2015/09/Sri-Kalahasti-Temple-e1455511300537.jpg" alt="Arunachalam"/></div><div class="tc-name">Arunachalam</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://temple.yatradham.org/public/Product/temple/temple_spkb15CZ_202408251324480.jpg" alt="Kanchi"/></div><div class="tc-name">Kanchi</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://www.templepurohit.com/wp-content/uploads/2015/02/Ramanathaswamy-temple-Rameswaram-Tamil-nadu-e1481445517760.jpg" alt="Rameshwaram"/></div><div class="tc-name">Rameshwaram</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Srirangam-Rajagopuram-1.jpg/500px-Srirangam-Rajagopuram-1.jpg" alt="Srirangam"/></div><div class="tc-name">Srirangam</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEMMALA SIGHTSEEING ===== -->
+<section id="sightseeing" class="sec sec-navy">
+  <div class="ctr">
+    <div class="sh wh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Temmala Sightseeing</h2>
+    </div>
+    <div class="sg-grid">
+      <div class="sc rv"><img src="https://i.pinimg.com/originals/28/cf/77/28cf7745929f637187b79b5384010bfa.jpg" alt="Akasa Ganga"/><div class="sc-lbl">Akasa Ganga</div></div>
+      <div class="sc rv"><img src="https://i.pinimg.com/originals/3d/df/c8/3ddfc8b802183aa41fe514b42a9a89e6.jpg" alt="Silathoranam"/><div class="sc-lbl">Silathoranam</div></div>
+      <div class="sc rv"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/78/d4/c7/apsara-vihar.jpg?w=1000&h=1000&s=1" alt="Chakra Theertham"/><div class="sc-lbl">Chakra Theertham</div></div>
+      <div class="sc rv"><img src="https://1.bp.blogspot.com/-coV5vdtiowo/XDGWgSId2FI/AAAAAAABQHU/Um5kk6VuTewMWhcH4neDKvEz6l5gpkP_wCEwYBhgL/s1600/IMG_20170621_162615%2B%25281%2529.jpg" alt="Papavinasanam"/><div class="sc-lbl">Papavinasanam</div></div>
+      <div class="sc rv"><img src="https://www.rajasthantourplanner.com/blog/wp-content/uploads/2020/12/Sri-Vari-Museum.jpg" alt="Srivari Museum"/><div class="sc-lbl">Srivari Museum</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POPULAR DESTINATIONS ===== -->
+<section id="destinations" class="destinations-section">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;margin-bottom:48px">
+    <div class="sh wh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Popular Destinations</h2>
+      <p>Explore our sacred and scenic pilgrimage destinations</p>
+    </div>
+  </div>
+  <div class="destinations-grid">
+    <div class="destination-card rv">
+      <img src="https://3.imimg.com/data3/AO/CK/MDC-5726533/cityimages-115-130-1356519843-500x500.jpg" alt="Tirumala" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Tirumala Temple</div>
+        <div class="destination-highlight">Most sacred destination</div>
       </div>
     </div>
-  </section>
 
-  <!-- QUICK STATS -->
-  <section style="padding: 60px 24px;">
-    <div class="stats" style="max-width: 1240px; margin: 0 auto;">
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-car"></i></div>
-        <div class="stat-number">50+</div>
-        <div class="stat-label">Premium Vehicles</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-smile"></i></div>
-        <div class="stat-number">5000+</div>
-        <div class="stat-label">Happy Customers</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <div class="stat-number">15+</div>
-        <div class="stat-label">Destinations</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-star"></i></div>
-        <div class="stat-number">4.9/5</div>
-        <div class="stat-label">Average Rating</div>
+    <div class="destination-card rv">
+      <img src="https://www.saiprashnavali.com/wp-content/uploads/2020/04/Srikalahasti-Temple-Timings.jpg" alt="Srikalahasti" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Srikalahasti</div>
+        <div class="destination-highlight">Historic temple heritage</div>
       </div>
     </div>
-  </section>
 
-  <!-- PACKAGES -->
-  <section id="packages">
-    <div class="section-title">
-      <h2>Tour Packages</h2>
-      <p>Curated pilgrimage packages designed for your spiritual journey to Tirupati and Tirumala</p>
-    </div>
-
-    <div class="packages-grid">
-      <div class="package-card">
-        <img src="https://wallpaperaccess.com/full/3479515.jpg" alt="One Day Package" class="package-image">
-        <div class="package-body">
-          <span class="package-label">Popular</span>
-          <h3 class="package-title">One Day Tirumala</h3>
-          <p class="package-desc">Perfect for quick pilgrimage with temple darshan and local sightseeing.</p>
-          <div class="package-price">₹2,499</div>
-          <ul class="package-features">
-            <li><i class="fas fa-check-circle"></i> Hotel Pickup & Drop</li>
-            <li><i class="fas fa-check-circle"></i> Temple Darshan Entry</li>
-            <li><i class="fas fa-check-circle"></i> Local Sightseeing</li>
-            <li><i class="fas fa-check-circle"></i> Experienced Driver</li>
-          </ul>
-          <button class="btn btn-primary" style="width: 100%;">Book Package</button>
-        </div>
-      </div>
-
-      <div class="package-card">
-        <img src="https://image.shutterstock.com/image-photo/srikalahasti-andhra-pradesh-india-september-260nw-2067305630.jpg" alt="2 Days Package" class="package-image">
-        <div class="package-body">
-          <span class="package-label">Best Value</span>
-          <h3 class="package-title">2 Days Pilgrimage</h3>
-          <p class="package-desc">Comprehensive tour including Tirumala, Srikalahasti, and nearby temples.</p>
-          <div class="package-price">₹5,999</div>
-          <ul class="package-features">
-            <li><i class="fas fa-check-circle"></i> Hotel Accommodation</li>
-            <li><i class="fas fa-check-circle"></i> All Meals Included</li>
-            <li><i class="fas fa-check-circle"></i> Temple Tours</li>
-            <li><i class="fas fa-check-circle"></i> Local Guide</li>
-          </ul>
-          <button class="btn btn-primary" style="width: 100%;">Book Package</button>
-        </div>
-      </div>
-
-      <div class="package-card">
-        <img src="https://live.staticflickr.com/5634/22472587031_14c3aa84f4_b.jpg" alt="4 Days Package" class="package-image">
-        <div class="package-body">
-          <span class="package-label">Premium</span>
-          <h3 class="package-title">4 Days South Temple Tour</h3>
-          <p class="package-desc">Extended tour to multiple sacred destinations including Vellore and Kanipakam.</p>
-          <div class="package-price">₹12,999</div>
-          <ul class="package-features">
-            <li><i class="fas fa-check-circle"></i> 5-Star Hotel Stay</li>
-            <li><i class="fas fa-check-circle"></i> All Meals & Snacks</li>
-            <li><i class="fas fa-check-circle"></i> 5 Temple Tours</li>
-            <li><i class="fas fa-check-circle"></i> Expert Guide</li>
-          </ul>
-          <button class="btn btn-primary" style="width: 100%;">Book Package</button>
-        </div>
+    <div class="destination-card rv">
+      <img src="https://live.staticflickr.com/5634/22472587031_14c3aa84f4_b.jpg" alt="Kanipakam" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Kanipakam</div>
+        <div class="destination-highlight">Self-manifested deity</div>
       </div>
     </div>
-  </section>
 
-  <!-- DESTINATIONS -->
-  <section id="destinations">
-    <div class="section-title">
-      <h2>Featured Destinations</h2>
-      <p>Explore the most sacred pilgrimage sites across South India</p>
+    <div class="destination-card rv">
+      <img src="https://famoustemplesofindia.com/wp-content/uploads/2024/06/Golden-Temple-Vellore-1-1024x768.jpg" alt="Golden Temple Vellore" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Golden Temple Vellore</div>
+        <div class="destination-highlight">Golden domes & gardens</div>
+      </div>
     </div>
 
-    <div class="destinations-grid">
-      <div class="destination-card">
-        <img src="https://3.imimg.com/data3/AO/CK/MDC-5726533/cityimages-115-130-1356519843-500x500.jpg" alt="Tirumala" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Tirumala Temple</div>
-          <div class="destination-highlight">Most sacred destination</div>
-        </div>
+    <div class="destination-card rv">
+      <img src="https://www.templepurohit.com/wp-content/uploads/2015/09/Sri-Kalahasti-Temple-e1455511300537.jpg" alt="Arunachalam" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Arunachalam</div>
+        <div class="destination-highlight">Sacred hill temple</div>
       </div>
-
-      <div class="destination-card">
-        <img src="https://www.saiprashnavali.com/wp-content/uploads/2020/04/Srikalahasti-Temple-Timings.jpg" alt="Srikalahasti" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Srikalahasti</div>
-          <div class="destination-highlight">Historic temple heritage</div>
-        </div>
-      </div>
-
-      <div class="destination-card">
-        <img src="https://live.staticflickr.com/5634/22472587031_14c3aa84f4_b.jpg" alt="Kanipakam" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Kanipakam</div>
-          <div class="destination-highlight">Self-manifested deity</div>
-        </div>
-      </div>
-
-      <div class="destination-card">
-        <img src="https://famoustemplesofindia.com/wp-content/uploads/2024/06/Golden-Temple-Vellore-1-1024x768.jpg" alt="Golden Temple Vellore" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Golden Temple Vellore</div>
-          <div class="destination-highlight">Golden domes & gardens</div>
-        </div>
-      </div>
-
-      <div class="destination-card">
-        <img src="https://www.templepurohit.com/wp-content/uploads/2015/09/Sri-Kalahasti-Temple-e1455511300537.jpg" alt="Arunachalam" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Arunachalam</div>
-          <div class="destination-highlight">Sacred hill temple</div>
-        </div>
-      </div>
-
-      <div class="destination-card">
-        <img src="https://www.templepurohit.com/wp-content/uploads/2015/02/Ramanathaswamy-temple-Rameswaram-Tamil-nadu-e1481445517760.jpg" alt="Rameshwaram" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Rameshwaram</div>
-          <div class="destination-highlight">Holy island pilgrimage</div>
-        </div>
-      </div>
-
-      <div class="destination-card">
-        <img src="https://i.pinimg.com/originals/88/6b/2e/886b2e5e2119a082fdd7589d30768168.jpg" alt="Chandragiri Fort" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Chandragiri Fort</div>
-          <div class="destination-highlight">Historic fortress temple</div>
-        </div>
-      </div>
-
-      <div class="destination-card">
-        <img src="https://indiano.travel/wp-content/uploads/2022/04/Feature-image-6.jpg" alt="Padmavati Temple" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Padmavati Temple</div>
-          <div class="destination-highlight">Consort of Lord Venkateswara</div>
-        </div>
-      </div>
-
-      <div class="destination-card">
-        <img src="https://2.bp.blogspot.com/-M2SCOhC3bto/VCagDxgQdJI/AAAAAAAAE_4/Fqnn9yY6dEY/s1600/Sreenivasa_mangapuram_temple.jpg" alt="Srinivasa Mangapuram" class="destination-image">
-        <div class="destination-overlay">
-          <div class="destination-name">Srinivasa Mangapuram</div>
-          <div class="destination-highlight">Scenic pilgrimage hill</div>
-        </div>
-      </div>
-
-     
     </div>
-  </section>
 
-  <!-- OUR FLEET -->
-  <section style="background: linear-gradient(135deg, var(--light-bg) 0%, #eef2ff 100%);">
-    <div style="max-width: 1240px; margin: 0 auto;">
-      <div class="section-title">
-        <h2>Our Premium Fleet</h2>
-        <p>Travel in comfort with our well-maintained and modern vehicles</p>
+    <div class="destination-card rv">
+      <img src="https://www.templepurohit.com/wp-content/uploads/2015/02/Ramanathaswamy-temple-Rameswaram-Tamil-nadu-e1481445517760.jpg" alt="Rameshwaram" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Rameshwaram</div>
+        <div class="destination-highlight">Holy island pilgrimage</div>
       </div>
-
-      <!-- FEATURED VEHICLE -->
-      <div class="fleet-featured" style="margin-bottom: 60px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-          <div style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
-            <img src="https://stimg.cardekho.com/images/car-images/930x620/Toyota/Innova-Crysta/9612/1680600172230/221_super-white_e8e8e8.jpg?tr=w-898" alt="Toyota Innova" style="width: 600px; height: 400px; object-fit: cover;">
-          </div>
-          <div>
-            <span class="package-label" style="margin-bottom: 12px;">FEATURED</span>
-            <h3 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 12px;">Toyota Innova</h3>
-            <p style="color: var(--primary); font-weight: 700; font-size: 1.1rem; margin-bottom: 16px;">7 Seater Premium SUV</p>
-            <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 24px;">Perfect for families and groups on pilgrimage journeys. Spacious interior, smooth suspension, and premium comfort features make every journey memorable.</p>
-            
-            <div style="display: grid; gap: 12px; margin-bottom: 24px;">
-              <div style="display: flex; gap: 12px; align-items: center;">
-                <div style="width: 40px; height: 40px; background: rgba(11, 94, 215, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
-                  <i class="fas fa-users"></i>
-                </div>
-                <div>
-                  <p style="font-weight: 600; color: var(--text-dark);">Seating Capacity</p>
-                  <p style="color: var(--text-gray); font-size: 0.9rem;">7 passengers + luggage</p>
-                </div>
-              </div>
-              <div style="display: flex; gap: 12px; align-items: center;">
-                <div style="width: 40px; height: 40px; background: rgba(11, 94, 215, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
-                  <i class="fas fa-snowflake"></i>
-                </div>
-                <div>
-                  <p style="font-weight: 600; color: var(--text-dark);">Air Conditioning</p>
-                  <p style="color: var(--text-gray); font-size: 0.9rem;">Dual zone climate control</p>
-                </div>
-              </div>
-              <div style="display: flex; gap: 12px; align-items: center;">
-                <div style="width: 40px; height: 40px; background: rgba(11, 94, 215, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
-                  <i class="fas fa-shield-alt"></i>
-                </div>
-                <div>
-                  <p style="font-weight: 600; color: var(--text-dark);">Full Coverage</p>
-                  <p style="color: var(--text-gray); font-size: 0.9rem;">Insurance & roadside assistance</p>
-                </div>
-              </div>
-              <div style="display: flex; gap: 12px; align-items: center;">
-                <div style="width: 40px; height: 40px; background: rgba(11, 94, 215, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
-                  <i class="fas fa-rupee-sign"></i>
-                </div>
-                <div>
-                  <p style="font-weight: 600; color: var(--text-dark);">Daily Rate</p>
-                  <p style="color: var(--primary); font-size: 1.1rem; font-weight: 700;">₹3,500/day</p>
-                </div>
-              </div>
-            </div>
-
-            <button class="btn btn-primary" style="padding: 14px 28px;"><i class="fas fa-check"></i> Book Now</button>
-          </div>
-        </div>
-      </div>
-
-
     </div>
-  </section>
 
-  <!-- BOOKING SECTION -->
-  <section style="background: var(--light-bg);">
-    <div style="max-width: 1240px; margin: 0 auto;">
-      <div class="section-title">
-        <h2>Book Your Journey</h2>
-        <p>Reserve your vehicle instantly or inquire about custom packages</p>
+    <div class="destination-card rv">
+      <img src="https://i.pinimg.com/originals/88/6b/2e/886b2e5e2119a082fdd7589d30768168.jpg" alt="Chandragiri Fort" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Chandragiri Fort</div>
+        <div class="destination-highlight">Historic fortress temple</div>
       </div>
+    </div>
 
-      <div class="booking-container">
-        <form class="booking-form" onsubmit="handleBooking(event)">
-          <h3>Quick Booking Form</h3>
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Full Name *</label>
-              <input type="text" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-              <label>Phone Number *</label>
-              <input type="tel" placeholder="9876543210" required>
-            </div>
-          </div>
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Pickup Location *</label>
-              <input type="text" placeholder="Hotel / Airport / Station" required>
-            </div>
-            <div class="form-group">
-              <label>Drop Location *</label>
-              <input type="text" placeholder="Tirumala / Temple / Destination" required>
-            </div>
-          </div>
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Journey Date *</label>
-              <input type="date" required>
-            </div>
-            <div class="form-group">
-              <label>Vehicle Type *</label>
-              <select required>
-                <option>Toyota Innova (7 Seater)</option>
-                <option>Tempo Traveller (12 Seater)</option>
-                <option>Sedan (4 Seater)</option>
-                <option>SUV (7 Seater)</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px;">Submit Booking</button>
-        </form>
+    <div class="destination-card rv">
+      <img src="https://indiano.travel/wp-content/uploads/2022/04/Feature-image-6.jpg" alt="Padmavati Temple" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Padmavati Temple</div>
+        <div class="destination-highlight">Consort of Lord Venkateswara</div>
+      </div>
+    </div>
 
-        <div class="booking-info">
-          <h3>Why Book With Us?</h3>
-          <p>SLV Travels offers premium pilgrimage services with expert guidance, comfortable vehicles, and personalized itineraries for your sacred journey to Tirupati and Tirumala.</p>
-          
-          <div class="contact-quick">
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <a href="tel:8088007840">8088007840</a>
+    <div class="destination-card rv">
+      <img src="https://2.bp.blogspot.com/-M2SCOhC3bto/VCagDxgQdJI/AAAAAAAAE_4/Fqnn9yY6dEY/s1600/Sreenivasa_mangapuram_temple.jpg" alt="Srinivasa Mangapuram" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Srinivasa Mangapuram</div>
+        <div class="destination-highlight">Scenic pilgrimage hill</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR FLEET ===== -->
+<section id="fleet" class="fleet-section sec">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Our Premium Fleet</h2>
+      <p>Travel in comfort with our well-maintained and modern vehicles</p>
+    </div>
+
+    <!-- FEATURED VEHICLE -->
+    <div class="fleet-featured rv">
+      <div class="fleet-featured-card">
+        <div class="fleet-featured-image">
+          <img src="https://stimg.cardekho.com/images/car-images/930x620/Toyota/Innova-Crysta/9612/1680600172230/221_super-white_e8e8e8.jpg?tr=w-898" alt="Toyota Innova">
+        </div>
+        <div class="fleet-featured-copy">
+          <div class="orn" style="justify-content:flex-start"><i class="fas fa-star"></i></div>
+          <h3>Toyota Innova Crysta</h3>
+          <p>
+            Experience premium comfort with our flagship Toyota Innova Crysta. Perfect for family tours, group travels, and long journeys with ample seating, air-conditioning, and modern amenities.
+          </p>
+          <div class="fleet-featured-list">
+            <div>
+              <i class="fas fa-users"></i>Seating: 8 Passengers
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <a href="tel:7675072985">7675072985</a>
+            <div>
+              <i class="fas fa-wind"></i>Full AC & Comfort
             </div>
-            <div class="contact-item">
-              <i class="fab fa-whatsapp"></i>
-              <a href="https://wa.me/918088007840">WhatsApp Support</a>
+            <div>
+              <i class="fas fa-road"></i>Long Distance Ready
             </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Tirupati | Tirumala</span>
+            <div>
+              <i class="fas fa-heart"></i>Well Maintained
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIALS -->
-  <section>
-    <div class="section-title">
-      <h2>Customer Testimonials</h2>
-      <p>Hear from pilgrims who experienced our premium service</p>
+<!-- ===== VEHICLE / WHY / BOOKING ===== -->
+<section id="booking" class="sec sec-light">
+  <div class="ctr">
+    <div class="tcol">
+      <!-- Our Vehicle -->
+      <div class="vc rv">
+        <div style="text-align:center;margin-bottom:16px">
+          <div class="orn" style="justify-content:center"><i class="fas fa-star"></i></div>
+          <div class="col-h">Our Vehicle</div>
+        </div>
+        <div class="veh-img">
+          <img src="https://cdn.cars24.com/prod/new-car-cms/Innova_Crysta_Feature_Image_234390a7bc.png" alt="Toyota Innova"/>
+          <div class="veh-lbl">Toyota Innova</div>
+        </div>
+        <div class="vf-grid" style="margin-top:12px">
+          <div class="vf-item"><i class="fas fa-check"></i> Comfortable Rides</div>
+          <div class="vf-item"><i class="fas fa-check"></i> Affordable Prices</div>
+          <div class="vf-item"><i class="fas fa-check"></i> Experienced Drivers</div>
+          <div class="vf-item"><i class="fas fa-check"></i> On-Time Service</div>
+        </div>
+      </div>
+
+      <!-- Why Travel With Us -->
+      <div class="rv">
+        <div style="text-align:center;margin-bottom:16px">
+          <div class="orn" style="justify-content:center"><i class="fas fa-star"></i></div>
+          <div class="col-h">Why Travel With Us?</div>
+        </div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-tools"></i></div><p>Well Maintained Vehicles</p></div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-user-tie"></i></div><p>Professional &amp; Courteous Drivers</p></div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-tags"></i></div><p>Transparent Pricing</p></div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-smile"></i></div><p>Customer Satisfaction First</p></div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-headset"></i></div><p>24/7 Support</p></div>
+      </div>
+
+      <!-- Book Your Trip -->
+      <div class="rv booking-card">
+        <div class="booking-head">
+          <div class="orn" style="justify-content:center"><i class="fas fa-star"></i></div>
+          <div class="col-h">Book Your Trip</div>
+          <p class="booking-sub">Share your travel details and get quick confirmation on WhatsApp.</p>
+        </div>
+        <div class="frow">
+          <input type="text" class="finp" id="bName" placeholder="Your Name"/>
+          <input type="tel" class="finp" id="bPhone" placeholder="Phone Number"/>
+        </div>
+        <div class="frow">
+          <input type="text" class="finp" id="bPickup" placeholder="Pickup Location"/>
+          <input type="text" class="finp" id="bDrop" placeholder="Drop Location"/>
+        </div>
+        <div class="frow">
+          <input type="date" class="finp" id="bDate"/>
+          <select class="finp" id="bVehicle">
+            <option>Toyota Innova</option>
+            <option>Toyota Innova Crysta</option>
+            <option>Maruti Swift Dzire</option>
+            <option>Tempo Traveller (12 Seat)</option>
+            <option>Mini Bus (20 Seat)</option>
+          </select>
+        </div>
+        <button class="fsub" onclick="bookNow()"><i class="fas fa-paper-plane"></i> Submit Booking</button>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-text">"SLV Travels made our family pilgrimage unforgettable. The driver was courteous, vehicle was clean, and the entire experience was stress-free. Highly recommended!"</p>
-        <div class="testimonial-author">— Ramesh K., Chennai</div>
+<!-- ===== CUSTOMER REVIEWS ===== -->
+<section id="reviews" class="sec">
+  <div class="ctr">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Customer Reviews</h2>
+    </div>
+    <div class="rv-grid">
+      <div class="rvc rv">
+        <div class="stars">★★★★★</div>
+        <p class="rv-txt">"Very comfortable trip and excellent driver support. Highly recommended for families visiting Tirumala!"</p>
+        <div class="rv-user"><div class="rv-av"><i class="fas fa-user"></i></div><div><div class="rv-name">– Ramesh</div><div class="rv-sub">Tirupati Pilgrimage</div></div></div>
       </div>
-
-      <div class="testimonial-card">
-        <div class="stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-text">"Best travel service in Tirupati! The packages are affordable and the team is very helpful in planning the itinerary. Already booked our next tour!"</p>
-        <div class="testimonial-author">— Lakshmi R., Bangalore</div>
+      <div class="rvc rv">
+        <div class="stars">★★★★★</div>
+        <p class="rv-txt">"Best Tirupati travel service with affordable pricing and smooth journey. Will definitely book again!"</p>
+        <div class="rv-user"><div class="rv-av"><i class="fas fa-user"></i></div><div><div class="rv-name">– Lakshmi</div><div class="rv-sub">Temple Tour Package</div></div></div>
       </div>
-
-      <div class="testimonial-card">
-        <div class="stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-text">"Professional service from booking to drop-off. The car was comfortable, and the driver knew all the best routes. Perfect experience for our temple tour!"</p>
-        <div class="testimonial-author">— Suresh M., Hyderabad</div>
+      <div class="rvc rv">
+        <div class="stars">★★★★★</div>
+        <p class="rv-txt">"Professional service and on-time pickup. Family trip was amazing. SLV Travels is our first choice!"</p>
+        <div class="rv-user"><div class="rv-av"><i class="fas fa-user"></i></div><div><div class="rv-name">– Suresh</div><div class="rv-sub">Family Group Travel</div></div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- GALLERY -->
-  <section style="background: var(--light-bg);">
-    <div style="max-width: 1240px; margin: 0 auto;">
-      <div class="section-title">
-        <h2>Photo Gallery</h2>
-        <p>Moments from our pilgrimage journeys</p>
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="sec">
+  <div class="ctr">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Contact Us</h2>
+    </div>
+    <div class="ct-grid">
+      <div class="ctc rv">
+        <div class="ct-ic"><i class="fas fa-phone-alt"></i></div>
+        <h3>Call Us</h3>
+        <p>
+          <a href="tel:8088007840"><i class="fas fa-phone" style="color:var(--gold);font-size:0.72rem;margin-right:5px"></i>8088007840</a><br/>
+          <a href="tel:7675072985"><i class="fas fa-phone" style="color:var(--gold);font-size:0.72rem;margin-right:5px"></i>7675072985</a>
+        </p>
+        <div style="margin-top:11px;display:flex;align-items:flex-start;gap:7px;justify-content:center">
+          <i class="fas fa-map-marker-alt" style="color:var(--gold);margin-top:2px;font-size:0.82rem"></i>
+          <p style="text-align:left">Tirupati | Tirumala<br/>And Surrounding Areas</p>
+        </div>
       </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/15167632/pexels-photo-15167632.jpeg?cs=srgb&dl=pexels-ramkrishnaiyengar-15167632.jpg&fm=jpg" alt="Temple">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/12752172/pexels-photo-12752172.jpeg?cs=srgb&dl=pexels-pravin-kannah-photography-42707363-12752172.jpg&fm=jpg" alt="Temple Architecture">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/8230166/pexels-photo-8230166.jpeg?cs=srgb&dl=pexels-azharphotography-8230166.jpg&fm=jpg" alt="Temple Entrance">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/36832406/pexels-photo-36832406.jpeg?cs=srgb&dl=pexels-open-borders-36832406.jpg&fm=jpg" alt="Sacred Site">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/36849512/pexels-photo-36849512.jpeg?cs=srgb&dl=pexels-pavan-prasad-2156671405-36849512.jpg&fm=jpg" alt="Pilgrimage">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/33633666/pexels-photo-33633666.jpeg?cs=srgb&dl=pexels-sowminee-g-2150687978-33633666.jpg&fm=jpg" alt="Heritage">
-        </div>
+      <div class="ctc rv" style="padding:16px">
+        <h3 style="margin-bottom:6px">Our Location</h3>
+        <iframe class="map-if"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.245867490734!2d79.4181!3d13.6294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b7c0e000001%3A0x0!2sTirupati%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SLV Travels Map">
+        </iframe>
+      </div>
+      <div class="ctc rv">
+        <div class="ct-ic" style="background:var(--green)"><i class="fab fa-whatsapp"></i></div>
+        <h3>Chat on WhatsApp</h3>
+        <p>Instant booking and replies via WhatsApp messenger. Available 24/7 for your queries.</p>
+        <a href="https://wa.me/918088007840?text=Hi%20SLV%20Travels!" class="wa-btn-cta" target="_blank"><i class="fab fa-whatsapp" style="font-size:1.05rem"></i> Chat Now</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>About SLV Travels</h4>
-        <p style="margin-bottom: 16px;">Premium pilgrimage travel services specializing in Tirupati and Tirumala tours with comfortable vehicles and personalized itineraries.</p>
-        <div class="social-icons">
-          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="ctr">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="logo-title"><span class="sl">SLV</span> <span class="tr">Travels</span></div>
+        <span class="logo-tag">Safe Journey, Happy Journey</span>
+        <p>Your trusted travel partner for Tirupati, Tirumala and all temple destinations across South India.</p>
+        <div class="soc-row">
+          <a href="#" class="soc-lnk fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="soc-lnk ig"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="soc-lnk yt"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/918088007840" class="soc-lnk wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
-
-      <div class="footer-section">
+      <div class="ft-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="#packages">Packages</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#destinations">Destinations</a></li>
-          <li><a href="#rentals">Car Rentals</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#fleet">Fleet</a></li>
+          <li><a href="#booking">Packages</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-
-      <div class="footer-section">
-        <h4>Contact Information</h4>
-        <div style="margin-bottom: 16px;">
-          <strong>Phone Numbers:</strong>
-          <p><a href="tel:8088007840">8088007840</a></p>
-          <p><a href="tel:7675072985">7675072985</a></p>
-        </div>
-        <div>
-          <strong>Location:</strong>
-          <p>Tirupati | Tirumala</p>
-        </div>
+      <div class="ft-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#services">Taxi Services</a></li>
+          <li><a href="#services">Tour Packages</a></li>
+          <li><a href="#services">Airport Pickup &amp; Drop</a></li>
+          <li><a href="#services">Family &amp; Group Travel</a></li>
+          <li><a href="#services">One Day Trips</a></li>
+          <li><a href="#services">Multi-Day Tours</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="https://wa.me/918088007840" target="_blank">WhatsApp</a></li>
+        </ul>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 SLV Travels. All rights reserved. | Your Journey, Our Responsibility</p>
+    <div class="ft-bot">
+      <p>© 2024 SLV Travels. All Rights Reserved.</p>
+      <span class="ft-motto">Your Journey, Our Responsibility</span>
+      <button class="ft-up" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/918088007840" class="whatsapp-btn" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918088007840" class="fl-wa" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<!-- Scroll Top -->
+<button class="fl-top" id="flTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
 
-  <script>
-    function handleBooking(event) {
-      event.preventDefault();
-      alert('Thank you! Your booking request has been submitted. Our team will contact you shortly.');
-      event.target.reset();
+<script>
+// Scroll events
+window.addEventListener('scroll',function(){
+  document.getElementById('flTop').classList.toggle('on',window.scrollY>400);
+});
+
+// Menu
+function openMenu(){
+  document.getElementById('mobMenu').classList.add('open');
+  document.getElementById('ham').classList.add('open');
+}
+function closeMenu(){
+  document.getElementById('mobMenu').classList.remove('open');
+  document.getElementById('ham').classList.remove('open');
+}
+
+// Scroll reveal
+var rvEls=document.querySelectorAll('.rv');
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e,i){
+    if(e.isIntersecting){
+      setTimeout(function(){e.target.classList.add('vis')},i%9*55);
     }
-  </script>
+  });
+},{threshold:0.1});
+rvEls.forEach(function(el){obs.observe(el)});
+
+// Booking
+function bookNow(){
+  var n=document.getElementById('bName').value.trim();
+  var p=document.getElementById('bPhone').value.trim();
+  var pu=document.getElementById('bPickup').value.trim();
+  var dr=document.getElementById('bDrop').value.trim();
+  var dt=document.getElementById('bDate').value;
+  var vh=document.getElementById('bVehicle').value;
+  if(!n||!p||!pu||!dr){alert('Please fill Name, Phone, Pickup and Drop.');return;}
+  var msg=encodeURIComponent('Hi SLV Travels! I want to book a trip.\nName: '+n+'\nPhone: '+p+'\nPickup: '+pu+'\nDrop: '+dr+(dt?'\nDate: '+dt:'')+'\nVehicle: '+vh);
+  window.open('https://wa.me/918088007840?text='+msg,'_blank');
+  var t=document.getElementById('toast');
+  t.classList.add('on');
+  setTimeout(function(){t.classList.remove('on')},3500);
+}
+</script>
 </body>
 </html>
