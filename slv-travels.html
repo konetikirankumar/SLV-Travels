@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>SLV Travels – Tirupati | Tirumala | Safe Journey, Happy Journey</title>
+<meta name="description" content="SLV Travels – Your trusted travel partner for Tirupati, Tirumala and all South India temple destinations."/>
+<meta name="keywords" content="SLV Travels, Tirupati taxi, Tirumala tour, temple tour packages, Tirupati cab"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:#222;background:#fff;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
+
+:root{
+  --navy:#0d2166;
+  --navy2:#122270;
+  --red:#c0281e;
+  --red2:#e53227;
+  --gold:#f0a500;
+  --green:#25d366;
+  --bg:#f5f6fa;
+  --border:#e0e4ef;
+  --muted:#666;
+}
+
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#f0f0f0}
+::-webkit-scrollbar-thumb{background:var(--navy);border-radius:3px}
+
+/* ========= NAVBAR ========= */
+#navbar{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.1);
+  transition:box-shadow 0.3s;
+}
+.nav-inner{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 24px;gap:16px;
+}
+.logo{display:flex;flex-direction:column;line-height:1.15}
+.logo-title{font-size:1.65rem;font-weight:900;letter-spacing:-0.5px}
+.logo-title .sl{color:var(--navy)}
+.logo-title .tr{color:var(--red)}
+.logo-tag{font-size:0.58rem;color:var(--navy);font-weight:500;letter-spacing:1.5px;text-transform:uppercase;opacity:0.75}
+.nav-links{display:flex;align-items:center;gap:26px;flex:1;justify-content:center}
+.nav-links a{font-size:0.87rem;font-weight:500;color:#333;transition:color 0.2s;position:relative;padding-bottom:4px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--navy);transition:width 0.3s;border-radius:1px}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-phone-box{
+  display:flex;align-items:center;gap:8px;
+  background:var(--navy);border-radius:8px;padding:7px 14px;color:#fff;
+}
+.nav-phone-box i{color:var(--gold);font-size:0.85rem}
+.nav-phone-box .ph-nums{font-size:0.72rem;font-weight:600;line-height:1.55}
+.nav-wa{
+  width:36px;height:36px;border-radius:50%;background:var(--green);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.2rem;transition:transform 0.2s;
+}
+.nav-wa:hover{transform:scale(1.1)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:5px}
+.hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px;display:block;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile menu */
+.mob-menu{
+  display:none;position:fixed;inset:0;background:var(--navy);
+  z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:30px;
+}
+.mob-menu.open{display:flex}
+.mob-close{position:absolute;top:20px;right:22px;background:none;color:#fff;font-size:1.5rem}
+.mob-menu a{color:#fff;font-size:1.4rem;font-weight:700;transition:color 0.2s}
+.mob-menu a:hover{color:var(--gold)}
+
+/* ========= HERO ========= */
+#hero{
+  min-height:100vh;padding-top:72px;
+  background:linear-gradient(rgba(13,33,102,0.87),rgba(13,33,102,0.84)),
+             url('https://images.unsplash.com/photo-1583947582886-f1ec71ded673?w=1800&q=85') center/cover no-repeat;
+  display:flex;flex-direction:column;
+}
+.hero-body{
+  flex:1;max-width:1280px;margin:0 auto;width:100%;
+  display:flex;align-items:center;padding:36px 24px 0;gap:24px;
+}
+.hero-left{flex:1.1;min-width:0}
+.hero-right{flex:0.9;display:flex;align-items:flex-end;justify-content:center}
+.hero-right img{
+  max-height:360px;object-fit:contain;
+  filter:drop-shadow(0 20px 50px rgba(0,0,0,0.55));
+  animation:floatY 3.5s ease-in-out infinite;
+}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+.hero-h1{
+  font-size:clamp(3rem,8vw,5.5rem);font-weight:900;color:#fff;
+  line-height:1;margin-bottom:8px;letter-spacing:-1.5px;
+}
+.hero-h1 .tr{color:var(--red2)}
+.hero-loc{
+  font-size:clamp(1rem,2.5vw,1.45rem);font-weight:700;
+  color:#fff;letter-spacing:2px;margin-bottom:6px;
+}
+.hero-slogan{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(0.95rem,2vw,1.2rem);color:var(--gold);margin-bottom:30px;
+}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.hbtn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:11px 22px;border-radius:6px;font-weight:600;font-size:0.88rem;
+  transition:all 0.25s;letter-spacing:0.3px;
+}
+.hbtn-navy{background:var(--navy);color:#fff;border:2px solid rgba(255,255,255,0.25)}
+.hbtn-navy:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.5)}
+.hbtn-green{background:var(--green);color:#fff;border:2px solid var(--green)}
+.hbtn-green:hover{background:#1eb855;border-color:#1eb855}
+.hbtn-red{background:var(--red);color:#fff;border:2px solid var(--red)}
+.hbtn-red:hover{background:var(--red2);border-color:var(--red2)}
+
+.hero-feats{
+  display:flex;flex-wrap:wrap;gap:18px;
+  background:rgba(255,255,255,0.09);
+  border:1px solid rgba(255,255,255,0.18);
+  border-radius:10px;padding:14px 20px;
+  backdrop-filter:blur(8px);
+}
+.hfeat{display:flex;align-items:center;gap:9px;color:#fff}
+.hfeat-ic{
+  width:34px;height:34px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,0.45);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.82rem;flex-shrink:0;
+}
+.hfeat span{font-size:0.78rem;font-weight:600}
+
+/* ========= COMMON SECTION ========= */
+.sec{padding:68px 0}
+.sec-light{background:var(--bg)}
+.sec-navy{background:var(--navy)}
+.ctr{max-width:1280px;margin:0 auto;padding:0 24px}
+
+.sh{text-align:center;margin-bottom:44px}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:5px}
+.orn::before,.orn::after{content:'';flex:0 0 55px;height:2px}
+.orn::before{background:linear-gradient(90deg,transparent,var(--gold))}
+.orn::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.orn i{color:var(--gold);font-size:0.7rem}
+.sh h2{font-size:clamp(1.3rem,2.8vw,1.8rem);font-weight:800;color:var(--navy);letter-spacing:1px;text-transform:uppercase}
+.sh.wh h2{color:#fff}
+.sh p{color:var(--muted);font-size:0.84rem;margin-top:7px}
+.sh.wh p{color:rgba(255,255,255,0.6)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 0.55s ease,transform 0.55s ease}
+.rv.vis{opacity:1;transform:none}
+
+/* ========= SERVICES ========= */
+.srv-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.srv{
+  background:#fff;border:1.5px solid var(--border);border-radius:10px;
+  padding:26px 14px 20px;text-align:center;transition:all 0.3s;
+  position:relative;overflow:hidden;
+}
+.srv::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--navy),var(--gold));
+  transform:scaleX(0);transition:transform 0.3s;transform-origin:left;
+}
+.srv:hover{transform:translateY(-8px);box-shadow:0 14px 36px rgba(13,33,102,0.13);border-color:var(--navy)}
+.srv:hover::after{transform:scaleX(1)}
+.srv-ic{
+  width:56px;height:56px;border-radius:12px;
+  background:rgba(13,33,102,0.08);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 12px;transition:all 0.3s;
+}
+.srv-ic i{font-size:1.35rem;color:var(--navy);transition:all 0.3s}
+.srv:hover .srv-ic{background:var(--navy)}
+.srv:hover .srv-ic i{color:var(--gold)}
+.srv h3{font-size:0.78rem;font-weight:700;color:var(--navy);margin-bottom:5px;line-height:1.35}
+.srv p{font-size:0.7rem;color:var(--muted);line-height:1.6}
+
+/* ========= TEMPLE DESTINATIONS ========= */
+.tmpl-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:10px}
+.tc{
+  border:1.5px solid var(--border);border-radius:10px;overflow:hidden;
+  background:#fff;transition:all 0.3s;
+}
+.tc:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(13,33,102,0.14);border-color:var(--navy)}
+.tc-img{height:105px;overflow:hidden}
+.tc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.tc:hover .tc-img img{transform:scale(1.1)}
+.tc-name{
+  padding:7px 7px 9px;font-size:0.68rem;font-weight:700;
+  color:var(--navy);text-align:center;line-height:1.35;
+}
+
+/* ========= SIGHTSEEING ========= */
+.sg-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sc{border-radius:10px;overflow:hidden;position:relative;cursor:pointer;border:1px solid rgba(255,255,255,0.1)}
+.sc img{width:100%;height:155px;object-fit:cover;display:block;transition:transform 0.4s}
+.sc:hover img{transform:scale(1.09)}
+.sc-lbl{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(13,33,102,0.88),transparent);
+  color:#fff;font-size:0.75rem;font-weight:700;
+  padding:22px 10px 8px;text-align:center;
+}
+
+/* ========= THREE-COL LAYOUT ========= */
+.tcol{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:start}
+
+/* Vehicle */
+.veh-img{position:relative;margin-bottom:14px}
+.veh-img img{width:100%;border-radius:10px;box-shadow:0 8px 28px rgba(13,33,102,0.12)}
+.veh-lbl{
+  position:absolute;top:-9px;right:10px;
+  background:var(--red);color:#fff;
+  font-size:0.65rem;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:0.5px;
+}
+.col-h{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:14px;text-align:center;text-transform:uppercase;letter-spacing:0.5px}
+.vf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vf-item{display:flex;align-items:center;gap:7px;font-size:0.76rem;color:#333;font-weight:500}
+.vf-item i{color:var(--navy);background:rgba(13,33,102,0.09);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0}
+
+/* Why col */
+.why-item{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.why-ic{
+  width:30px;height:30px;border-radius:50%;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:0.75rem;flex-shrink:0;
+}
+.why-item p{font-size:0.8rem;color:#333;font-weight:500}
+
+/* Booking form */
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:9px}
+.finp{
+  width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:7px;
+  font-size:0.78rem;font-family:'Poppins',sans-serif;color:#333;
+  background:#fafbff;transition:border-color 0.2s;
+}
+.finp:focus{outline:none;border-color:var(--navy);background:#fff}
+.finp::placeholder{color:#bbb}
+.fsub{
+  width:100%;padding:12px;background:var(--navy);color:#fff;
+  border-radius:7px;font-size:0.86rem;font-weight:700;
+  transition:all 0.3s;letter-spacing:0.5px;margin-top:2px;
+}
+.fsub:hover{background:var(--red);transform:translateY(-2px)}
+.fsub i{margin-right:6px}
+
+/* ========= REVIEWS ========= */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rvc{
+  background:#fff;border:1.5px solid var(--border);border-radius:12px;
+  padding:22px 20px;transition:all 0.3s;
+  box-shadow:0 2px 10px rgba(13,33,102,0.05);position:relative;
+}
+.rvc:hover{transform:translateY(-6px);box-shadow:0 14px 36px rgba(13,33,102,0.1);border-color:var(--navy)}
+.rvc::before{
+  content:'\201C';font-size:4rem;font-family:'Playfair Display',serif;
+  color:var(--gold);opacity:0.15;position:absolute;top:8px;left:14px;line-height:1;
+}
+.stars{color:var(--gold);font-size:0.82rem;letter-spacing:2px;margin-bottom:10px}
+.rv-txt{font-size:0.8rem;color:var(--muted);line-height:1.75;margin-bottom:14px;font-style:italic}
+.rv-user{display:flex;align-items:center;gap:10px}
+.rv-av{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:0.95rem;flex-shrink:0;border:2px solid var(--gold);
+}
+.rv-name{font-weight:700;font-size:0.82rem;color:var(--navy)}
+.rv-sub{font-size:0.7rem;color:var(--muted)}
+
+/* ========= GALLERY ========= */
+.gal-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:185px 185px;
+  gap:11px;
+}
+.gi{border-radius:10px;overflow:hidden;position:relative;cursor:pointer}
+.gi:nth-child(1){grid-row:1/3}
+.gi:nth-child(5){grid-column:2/4}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.gi:hover img{transform:scale(1.09)}
+.gi-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,33,102,0.8),transparent);
+  opacity:0;transition:opacity 0.3s;
+  display:flex;align-items:flex-end;padding:14px;
+}
+.gi:hover .gi-ov{opacity:1}
+.gi-ov span{color:#fff;font-size:0.8rem;font-weight:600}
+
+/* ========= CONTACT ========= */
+.ct-grid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:24px;align-items:start}
+.ctc{
+  background:#fff;border:1.5px solid var(--border);border-radius:12px;
+  padding:26px 20px;text-align:center;
+  box-shadow:0 2px 10px rgba(13,33,102,0.05);
+}
+.ct-ic{
+  width:50px;height:50px;border-radius:12px;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:1.15rem;margin:0 auto 12px;
+}
+.ctc h3{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+.ctc a,.ctc p{font-size:0.82rem;color:var(--muted);line-height:1.9}
+.ctc a{color:var(--navy);font-weight:600;transition:color 0.2s}
+.ctc a:hover{color:var(--red)}
+.map-if{width:100%;height:175px;border:none;border-radius:8px;margin-top:8px}
+.wa-btn-cta{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--green);color:#fff;
+  padding:11px 22px;border-radius:30px;font-weight:700;font-size:0.85rem;
+  margin-top:12px;transition:all 0.3s;box-shadow:0 4px 14px rgba(37,211,102,0.3);
+}
+.wa-btn-cta:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(37,211,102,0.45)}
+
+/* ========= FOOTER ========= */
+footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
+.ft-grid{display:grid;grid-template-columns:1.8fr 1fr 1.2fr 1fr;gap:38px;margin-bottom:38px}
+.ft-brand .logo-title .sl{color:#fff}
+.ft-brand .logo-title .tr{color:var(--gold)}
+.ft-brand .logo-tag{color:var(--gold);opacity:1;margin-bottom:10px;display:block;margin-top:2px}
+.ft-brand p{font-size:0.76rem;line-height:1.85;color:rgba(255,255,255,0.52);margin-top:8px;max-width:255px}
+.ft-col h4{color:var(--gold);font-size:0.76rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:15px}
+.ft-col ul li{margin-bottom:8px}
+.ft-col ul li a{font-size:0.78rem;color:rgba(255,255,255,0.58);transition:color 0.2s;display:flex;align-items:center;gap:5px}
+.ft-col ul li a:hover{color:var(--gold)}
+.ft-col ul li a::before{content:'›';color:var(--gold);font-size:0.9rem}
+.soc-row{display:flex;gap:9px;margin-top:15px}
+.soc-lnk{
+  width:33px;height:33px;border-radius:8px;
+  border:1px solid rgba(255,255,255,0.2);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.58);font-size:0.88rem;transition:all 0.3s;
+}
+.soc-lnk:hover{transform:translateY(-3px)}
+.soc-lnk.fb:hover{background:#1877f2;border-color:#1877f2;color:#fff}
+.soc-lnk.ig:hover{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);border-color:transparent;color:#fff}
+.soc-lnk.yt:hover{background:#ff0000;border-color:#ff0000;color:#fff}
+.soc-lnk.wa:hover{background:var(--green);border-color:var(--green);color:#fff}
+.ft-bot{
+  border-top:1px solid rgba(255,255,255,0.1);padding:16px 24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+}
+.ft-bot p{font-size:0.73rem;color:rgba(255,255,255,0.38)}
+.ft-motto{color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:0.87rem}
+.ft-up{
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,0.1);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:0.82rem;transition:all 0.3s;border:none;
+}
+.ft-up:hover{background:var(--gold);color:var(--navy)}
+
+/* ========= FLOATERS ========= */
+.fl-wa{
+  position:fixed;bottom:76px;right:18px;z-index:800;
+  width:50px;height:50px;border-radius:50%;background:var(--green);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
+  box-shadow:0 4px 18px rgba(37,211,102,0.4);animation:wap 2s infinite;transition:transform 0.3s;
+}
+.fl-wa:hover{transform:scale(1.12)}
+@keyframes wap{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 32px rgba(37,211,102,0.68)}}
+.fl-top{
+  position:fixed;bottom:18px;right:18px;z-index:800;
+  width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:0.88rem;
+  opacity:0;pointer-events:none;transition:all 0.3s;cursor:pointer;border:none;
+  box-shadow:0 4px 14px rgba(13,33,102,0.3);
+}
+.fl-top.on{opacity:1;pointer-events:all}
+.fl-top:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}
+
+/* Toast */
+.toast{
+  position:fixed;top:82px;right:18px;z-index:2000;
+  background:var(--navy);color:#fff;padding:12px 20px;border-radius:10px;
+  font-size:0.82rem;font-weight:600;border-left:4px solid var(--gold);
+  box-shadow:0 6px 24px rgba(0,0,0,0.18);
+  transform:translateX(130%);transition:transform 0.4s;
+}
+.toast.on{transform:translateX(0)}
+
+/* ========= RESPONSIVE ========= */
+@media(max-width:1100px){
+  .srv-grid{grid-template-columns:repeat(3,1fr)}
+  .tmpl-grid{grid-template-columns:repeat(4,1fr)}
+  .sg-grid{grid-template-columns:repeat(3,1fr)}
+  .tcol{grid-template-columns:1fr 1fr;row-gap:28px}
+  .tcol .vc{grid-column:1/-1}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:800px){
+  .nav-links,.nav-phone-box{display:none}
+  .hamburger{display:flex}
+  .hero-right{display:none}
+  .hero-body{flex-direction:column;padding:18px 18px 0}
+  .tcol{grid-template-columns:1fr}
+  .rv-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px 160px}
+  .gi:nth-child(1),.gi:nth-child(5){grid-row:auto;grid-column:auto}
+  .ct-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .ft-bot{flex-direction:column;text-align:center}
+}
+@media(max-width:520px){
+  .srv-grid{grid-template-columns:repeat(2,1fr)}
+  .tmpl-grid{grid-template-columns:repeat(2,1fr)}
+  .sg-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .gi{height:190px}
+  .ft-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .hbtn{justify-content:center}
+  .frow{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:7px"></i>Booking request sent via WhatsApp!</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">
+      <div class="logo-title"><span class="sl">SLV</span> <span class="tr">Travels</span></div>
+      <div class="logo-tag">Safe Journey, Happy Journey</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#booking">Packages</a></li>
+      <li><a href="#temples">Temple Tours</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <div class="nav-phone-box">
+        <i class="fas fa-phone-alt"></i>
+        <div class="ph-nums"><span>8088007840</span><span>7675072985</span></div>
+      </div>
+      <a href="https://wa.me/918088007840" class="nav-wa" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <button class="hamburger" id="ham" onclick="openMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMenu()"><i class="fas fa-times"></i></button>
+  <a href="#hero" onclick="closeMenu()">Home</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#booking" onclick="closeMenu()">Packages</a>
+  <a href="#temples" onclick="closeMenu()">Temple Tours</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-body">
+    <div class="hero-left">
+      <h1 class="hero-h1">SLV <span class="tr">Travels</span></h1>
+      <p class="hero-loc">Tirupati &nbsp;|&nbsp; Tirumala</p>
+      <p class="hero-slogan">Safe Journey, Happy Journey</p>
+      <div class="hero-btns">
+        <a href="#booking" class="hbtn hbtn-navy"><i class="fas fa-calendar-check"></i> Book Now</a>
+        <a href="https://wa.me/918088007840" class="hbtn hbtn-green" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
+        <a href="tel:8088007840" class="hbtn hbtn-red"><i class="fas fa-phone-alt"></i> Call Now</a>
+      </div>
+      <div class="hero-feats">
+        <div class="hfeat"><div class="hfeat-ic"><i class="fas fa-shield-alt"></i></div><span>Safe &amp; Reliable</span></div>
+        <div class="hfeat"><div class="hfeat-ic"><i class="fas fa-user-tie"></i></div><span>Experienced Drivers</span></div>
+        <div class="hfeat"><div class="hfeat-ic"><i class="far fa-clock"></i></div><span>On Time Service</span></div>
+        <div class="hfeat"><div class="hfeat-ic"><i class="fas fa-rupee-sign"></i></div><span>Affordable Fares</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=85" alt="Toyota Innova – SLV Travels"/>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="sec sec-light">
+  <div class="ctr">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Our Services</h2>
+    </div>
+    <div class="srv-grid">
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-car"></i></div><h3>Taxi Services</h3><p>Comfortable and reliable taxi services.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-map-marked-alt"></i></div><h3>Tour Packages</h3><p>Affordable and customized tour packages.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-plane-arrival"></i></div><h3>Airport Pickup &amp; Drop</h3><p>On-time airport transfers with safe travel.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-users"></i></div><h3>Family &amp; Group Travel</h3><p>Spacious vehicles for family and group travel.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-sun"></i></div><h3>One Day Trips</h3><p>Enjoy quick spiritual and sightseeing tours.</p></div>
+      <div class="srv rv"><div class="srv-ic"><i class="fas fa-route"></i></div><h3>Multi-Day Tours</h3><p>Complete South India temple tour experiences.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEMPLE DESTINATIONS ===== -->
+<section id="temples" class="sec">
+  <div class="ctr">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Temple Destinations</h2>
+    </div>
+    <div class="tmpl-grid">
+      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1583947582886-f1ec71ded673?w=300&q=80" alt="Tirumala"/></div><div class="tc-name">Tirumala Temple</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1562605266-78c4a6fa01d2?w=300&q=80" alt="Srikalahasti"/></div><div class="tc-name">Srikalahasti</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1609780747274-31eab1b78827?w=300&q=80" alt="Kanipakam"/></div><div class="tc-name">Kanipakam</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=300&q=80" alt="Golden Temple"/></div><div class="tc-name">Golden Temple Vellore</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1599030327463-ebdfe4ffbfe8?w=300&q=80" alt="Arunachalam"/></div><div class="tc-name">Arunachalam</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1574125368545-0696e38e18c8?w=300&q=80" alt="Kanchi"/></div><div class="tc-name">Kanchi</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=300&q=80" alt="Rameshwaram"/></div><div class="tc-name">Rameshwaram</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=300&q=80" alt="Srirangam"/></div><div class="tc-name">Srirangam</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEMMALA SIGHTSEEING ===== -->
+<section id="sightseeing" class="sec sec-navy">
+  <div class="ctr">
+    <div class="sh wh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Temmala Sightseeing</h2>
+    </div>
+    <div class="sg-grid">
+      <div class="sc rv"><img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=400&q=80" alt="Akasa Ganga"/><div class="sc-lbl">Akasa Ganga</div></div>
+      <div class="sc rv"><img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&q=80" alt="Silathoranam"/><div class="sc-lbl">Silathoranam</div></div>
+      <div class="sc rv"><img src="https://images.unsplash.com/photo-1432958576632-8a39f6b97dc7?w=400&q=80" alt="Chakra Theertham"/><div class="sc-lbl">Chakra Theertham</div></div>
+      <div class="sc rv"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Papavinasanam"/><div class="sc-lbl">Papavinasanam</div></div>
+      <div class="sc rv"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=80" alt="Srivari Museum"/><div class="sc-lbl">Srivari Museum</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VEHICLE / WHY / BOOKING ===== -->
+<section id="booking" class="sec sec-light">
+  <div class="ctr">
+    <div class="tcol">
+      <!-- Our Vehicle -->
+      <div class="vc rv">
+        <div style="text-align:center;margin-bottom:16px">
+          <div class="orn" style="justify-content:center"><i class="fas fa-star"></i></div>
+          <div class="col-h">Our Vehicle</div>
+        </div>
+        <div class="veh-img">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&q=85" alt="Toyota Innova"/>
+          <div class="veh-lbl">Toyota Innova</div>
+        </div>
+        <div class="vf-grid" style="margin-top:12px">
+          <div class="vf-item"><i class="fas fa-check"></i> Comfortable Rides</div>
+          <div class="vf-item"><i class="fas fa-check"></i> Affordable Prices</div>
+          <div class="vf-item"><i class="fas fa-check"></i> Experienced Drivers</div>
+          <div class="vf-item"><i class="fas fa-check"></i> On-Time Service</div>
+        </div>
+      </div>
+
+      <!-- Why Travel With Us -->
+      <div class="rv">
+        <div style="text-align:center;margin-bottom:16px">
+          <div class="orn" style="justify-content:center"><i class="fas fa-star"></i></div>
+          <div class="col-h">Why Travel With Us?</div>
+        </div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-tools"></i></div><p>Well Maintained Vehicles</p></div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-user-tie"></i></div><p>Professional &amp; Courteous Drivers</p></div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-tags"></i></div><p>Transparent Pricing</p></div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-smile"></i></div><p>Customer Satisfaction First</p></div>
+        <div class="why-item"><div class="why-ic"><i class="fas fa-headset"></i></div><p>24/7 Support</p></div>
+      </div>
+
+      <!-- Book Your Trip -->
+      <div class="rv">
+        <div style="text-align:center;margin-bottom:16px">
+          <div class="orn" style="justify-content:center"><i class="fas fa-star"></i></div>
+          <div class="col-h">Book Your Trip</div>
+        </div>
+        <div class="frow">
+          <input type="text" class="finp" id="bName" placeholder="Your Name"/>
+          <input type="tel" class="finp" id="bPhone" placeholder="Phone Number"/>
+        </div>
+        <div class="frow">
+          <input type="text" class="finp" id="bPickup" placeholder="Pickup Location"/>
+          <input type="text" class="finp" id="bDrop" placeholder="Drop Location"/>
+        </div>
+        <div class="frow">
+          <input type="date" class="finp" id="bDate"/>
+          <select class="finp" id="bVehicle">
+            <option>Toyota Innova</option>
+            <option>Toyota Innova Crysta</option>
+            <option>Maruti Swift Dzire</option>
+            <option>Tempo Traveller (12 Seat)</option>
+            <option>Mini Bus (20 Seat)</option>
+          </select>
+        </div>
+        <button class="fsub" onclick="bookNow()"><i class="fas fa-paper-plane"></i> Submit Booking</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUSTOMER REVIEWS ===== -->
+<section id="reviews" class="sec">
+  <div class="ctr">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Customer Reviews</h2>
+    </div>
+    <div class="rv-grid">
+      <div class="rvc rv">
+        <div class="stars">★★★★★</div>
+        <p class="rv-txt">"Very comfortable trip and excellent driver support. Highly recommended for families visiting Tirumala!"</p>
+        <div class="rv-user"><div class="rv-av"><i class="fas fa-user"></i></div><div><div class="rv-name">– Ramesh</div><div class="rv-sub">Tirupati Pilgrimage</div></div></div>
+      </div>
+      <div class="rvc rv">
+        <div class="stars">★★★★★</div>
+        <p class="rv-txt">"Best Tirupati travel service with affordable pricing and smooth journey. Will definitely book again!"</p>
+        <div class="rv-user"><div class="rv-av"><i class="fas fa-user"></i></div><div><div class="rv-name">– Lakshmi</div><div class="rv-sub">Temple Tour Package</div></div></div>
+      </div>
+      <div class="rvc rv">
+        <div class="stars">★★★★★</div>
+        <p class="rv-txt">"Professional service and on-time pickup. Family trip was amazing. SLV Travels is our first choice!"</p>
+        <div class="rv-user"><div class="rv-av"><i class="fas fa-user"></i></div><div><div class="rv-name">– Suresh</div><div class="rv-sub">Family Group Travel</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="sec sec-navy">
+  <div class="ctr">
+    <div class="sh wh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Gallery</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="gi rv"><img src="https://images.unsplash.com/photo-1583947582886-f1ec71ded673?w=600&q=80" alt="Tirumala"/><div class="gi-ov"><span>Tirumala Temple</span></div></div>
+      <div class="gi rv"><img src="https://images.unsplash.com/photo-1562605266-78c4a6fa01d2?w=500&q=80" alt="Gopuram"/><div class="gi-ov"><span>Sacred Gopuram</span></div></div>
+      <div class="gi rv"><img src="https://images.unsplash.com/photo-1432958576632-8a39f6b97dc7?w=500&q=80" alt="Waterfall"/><div class="gi-ov"><span>Tirumala Waterfall</span></div></div>
+      <div class="gi rv"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&q=80" alt="Vehicle"/><div class="gi-ov"><span>Premium Fleet</span></div></div>
+      <div class="gi rv"><img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=600&q=80" alt="Hills"/><div class="gi-ov"><span>Tirumala Hills</span></div></div>
+      <div class="gi rv"><img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=500&q=80" alt="Rameshwaram"/><div class="gi-ov"><span>Rameshwaram</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="sec">
+  <div class="ctr">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Contact Us</h2>
+    </div>
+    <div class="ct-grid">
+      <div class="ctc rv">
+        <div class="ct-ic"><i class="fas fa-phone-alt"></i></div>
+        <h3>Call Us</h3>
+        <p>
+          <a href="tel:8088007840"><i class="fas fa-phone" style="color:var(--gold);font-size:0.72rem;margin-right:5px"></i>8088007840</a><br/>
+          <a href="tel:7675072985"><i class="fas fa-phone" style="color:var(--gold);font-size:0.72rem;margin-right:5px"></i>7675072985</a>
+        </p>
+        <div style="margin-top:11px;display:flex;align-items:flex-start;gap:7px;justify-content:center">
+          <i class="fas fa-map-marker-alt" style="color:var(--gold);margin-top:2px;font-size:0.82rem"></i>
+          <p style="text-align:left">Tirupati | Tirumala<br/>And Surrounding Areas</p>
+        </div>
+      </div>
+      <div class="ctc rv" style="padding:16px">
+        <h3 style="margin-bottom:6px">Our Location</h3>
+        <iframe class="map-if"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.245867490734!2d79.4181!3d13.6294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b7c0e000001%3A0x0!2sTirupati%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SLV Travels Map">
+        </iframe>
+      </div>
+      <div class="ctc rv">
+        <div class="ct-ic" style="background:var(--green)"><i class="fab fa-whatsapp"></i></div>
+        <h3>Chat on WhatsApp</h3>
+        <p>Instant booking and replies via WhatsApp messenger. Available 24/7 for your queries.</p>
+        <a href="https://wa.me/918088007840?text=Hi%20SLV%20Travels!" class="wa-btn-cta" target="_blank"><i class="fab fa-whatsapp" style="font-size:1.05rem"></i> Chat Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="ctr">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="logo-title"><span class="sl">SLV</span> <span class="tr">Travels</span></div>
+        <span class="logo-tag">Safe Journey, Happy Journey</span>
+        <p>Your trusted travel partner for Tirupati, Tirumala and all temple destinations across South India.</p>
+        <div class="soc-row">
+          <a href="#" class="soc-lnk fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="soc-lnk ig"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="soc-lnk yt"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/918088007840" class="soc-lnk wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#booking">Packages</a></li>
+          <li><a href="#temples">Temple Tours</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#services">Taxi Services</a></li>
+          <li><a href="#services">Tour Packages</a></li>
+          <li><a href="#services">Airport Pickup &amp; Drop</a></li>
+          <li><a href="#services">Family &amp; Group Travel</a></li>
+          <li><a href="#services">One Day Trips</a></li>
+          <li><a href="#services">Multi-Day Tours</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="https://wa.me/918088007840" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2024 SLV Travels. All Rights Reserved.</p>
+      <span class="ft-motto">Your Journey, Our Responsibility</span>
+      <button class="ft-up" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918088007840" class="fl-wa" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<!-- Scroll Top -->
+<button class="fl-top" id="flTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+// Scroll events
+window.addEventListener('scroll',function(){
+  document.getElementById('flTop').classList.toggle('on',window.scrollY>400);
+});
+
+// Menu
+function openMenu(){
+  document.getElementById('mobMenu').classList.add('open');
+  document.getElementById('ham').classList.add('open');
+}
+function closeMenu(){
+  document.getElementById('mobMenu').classList.remove('open');
+  document.getElementById('ham').classList.remove('open');
+}
+
+// Scroll reveal
+var rvEls=document.querySelectorAll('.rv');
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e,i){
+    if(e.isIntersecting){
+      setTimeout(function(){e.target.classList.add('vis')},i%9*55);
+    }
+  });
+},{threshold:0.1});
+rvEls.forEach(function(el){obs.observe(el)});
+
+// Booking
+function bookNow(){
+  var n=document.getElementById('bName').value.trim();
+  var p=document.getElementById('bPhone').value.trim();
+  var pu=document.getElementById('bPickup').value.trim();
+  var dr=document.getElementById('bDrop').value.trim();
+  var dt=document.getElementById('bDate').value;
+  var vh=document.getElementById('bVehicle').value;
+  if(!n||!p||!pu||!dr){alert('Please fill Name, Phone, Pickup and Drop.');return;}
+  var msg=encodeURIComponent('Hi SLV Travels! I want to book a trip.\nName: '+n+'\nPhone: '+p+'\nPickup: '+pu+'\nDrop: '+dr+(dt?'\nDate: '+dt:'')+'\nVehicle: '+vh);
+  window.open('https://wa.me/918088007840?text='+msg,'_blank');
+  var t=document.getElementById('toast');
+  t.classList.add('on');
+  setTimeout(function(){t.classList.remove('on')},3500);
+}
+</script>
+</body>
+</html>
