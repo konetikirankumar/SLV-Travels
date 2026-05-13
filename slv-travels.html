@@ -219,6 +219,58 @@ button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
   padding:22px 10px 8px;text-align:center;
 }
 
+/* ========= DESTINATIONS ========= */
+.destinations-section{
+  background:linear-gradient(rgba(7,21,44,0.6),rgba(7,21,44,0.6));
+  padding:68px 0;
+  color:#fff;
+}
+.destinations-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+  max-width:1280px;margin:0 auto;padding:0 24px;
+}
+.destination-card{
+  position:relative;border-radius:12px;overflow:hidden;
+  height:280px;cursor:pointer;transition:all 0.3s;
+  box-shadow:0 8px 24px rgba(0,0,0,0.25);
+}
+.destination-card:hover{transform:translateY(-8px);box-shadow:0 12px 36px rgba(0,0,0,0.35)}
+.destination-image{
+  width:100%;height:100%;object-fit:cover;transition:transform 0.4s;
+}
+.destination-card:hover .destination-image{transform:scale(1.08)}
+.destination-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,33,102,0.3),rgba(13,33,102,0.85));
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  padding:24px;text-align:center;color:#fff;
+}
+.destination-name{
+  font-size:1.05rem;font-weight:800;margin-bottom:6px;letter-spacing:0.5px;
+}
+.destination-highlight{
+  font-size:0.8rem;color:rgba(255,255,255,0.85);font-style:italic;
+}
+
+/* ========= FLEET ========= */
+.fleet-section{
+  background:linear-gradient(135deg,var(--light-bg) 0%,#eef2ff 100%);
+  padding:68px 0;
+}
+.fleet-featured{margin-bottom:60px}
+.fleet-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+  max-width:1280px;margin:0 auto;padding:0 24px;
+}
+.vehicle-card{
+  background:#fff;border-radius:12px;overflow:hidden;
+  box-shadow:0 4px 16px rgba(13,33,102,0.08);
+  transition:all 0.3s;
+}
+.vehicle-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(13,33,102,0.15)}
+.vehicle-img-box{border-radius:12px;overflow:hidden;margin-bottom:16px}
+.vehicle-img-box img{width:100%;height:220px;object-fit:cover}
+
 /* ========= THREE-COL LAYOUT ========= */
 .tcol{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:start}
 
@@ -284,27 +336,6 @@ button{cursor:pointer;border:none;outline:none;font-family:'Poppins',sans-serif}
 }
 .rv-name{font-weight:700;font-size:0.82rem;color:var(--navy)}
 .rv-sub{font-size:0.7rem;color:var(--muted)}
-
-/* ========= GALLERY ========= */
-.gal-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-template-rows:185px 185px;
-  gap:11px;
-}
-.gi{border-radius:10px;overflow:hidden;position:relative;cursor:pointer}
-.gi:nth-child(1){grid-row:1/3}
-.gi:nth-child(5){grid-column:2/4}
-.gi img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
-.gi:hover img{transform:scale(1.09)}
-.gi-ov{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(13,33,102,0.8),transparent);
-  opacity:0;transition:opacity 0.3s;
-  display:flex;align-items:flex-end;padding:14px;
-}
-.gi:hover .gi-ov{opacity:1}
-.gi-ov span{color:#fff;font-size:0.8rem;font-weight:600}
 
 /* ========= CONTACT ========= */
 .ct-grid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:24px;align-items:start}
@@ -403,6 +434,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
   .srv-grid{grid-template-columns:repeat(3,1fr)}
   .tmpl-grid{grid-template-columns:repeat(4,1fr)}
   .sg-grid{grid-template-columns:repeat(3,1fr)}
+  .destinations-grid{grid-template-columns:repeat(2,1fr)}
   .tcol{grid-template-columns:1fr 1fr;row-gap:28px}
   .tcol .vc{grid-column:1/-1}
   .ft-grid{grid-template-columns:1fr 1fr}
@@ -412,10 +444,9 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
   .hamburger{display:flex}
   .hero-right{display:none}
   .hero-body{flex-direction:column;padding:18px 18px 0}
+  .destinations-grid{grid-template-columns:1fr}
   .tcol{grid-template-columns:1fr}
   .rv-grid{grid-template-columns:1fr}
-  .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px 160px}
-  .gi:nth-child(1),.gi:nth-child(5){grid-row:auto;grid-column:auto}
   .ct-grid{grid-template-columns:1fr}
   .ft-grid{grid-template-columns:1fr 1fr;gap:26px}
   .ft-bot{flex-direction:column;text-align:center}
@@ -424,8 +455,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
   .srv-grid{grid-template-columns:repeat(2,1fr)}
   .tmpl-grid{grid-template-columns:repeat(2,1fr)}
   .sg-grid{grid-template-columns:repeat(2,1fr)}
-  .gal-grid{grid-template-columns:1fr;grid-template-rows:auto}
-  .gi{height:190px}
+  .destinations-grid{grid-template-columns:1fr}
   .ft-grid{grid-template-columns:1fr}
   .hero-btns{flex-direction:column}
   .hbtn{justify-content:center}
@@ -447,15 +477,15 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#fleet">Fleet</a></li>
       <li><a href="#booking">Packages</a></li>
-      <li><a href="#temples">Temple Tours</a></li>
-      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
       <div class="nav-phone-box">
         <i class="fas fa-phone-alt"></i>
-        <div class="ph-nums"><span>8088007840</span><span>7675072985</span></div>
+        <div class="ph-nums"><span>8088007840</span></div>
       </div>
       <a href="https://wa.me/918088007840" class="nav-wa" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       <button class="hamburger" id="ham" onclick="openMenu()"><span></span><span></span><span></span></button>
@@ -468,9 +498,9 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
   <button class="mob-close" onclick="closeMenu()"><i class="fas fa-times"></i></button>
   <a href="#hero" onclick="closeMenu()">Home</a>
   <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#destinations" onclick="closeMenu()">Destinations</a>
+  <a href="#fleet" onclick="closeMenu()">Fleet</a>
   <a href="#booking" onclick="closeMenu()">Packages</a>
-  <a href="#temples" onclick="closeMenu()">Temple Tours</a>
-  <a href="#gallery" onclick="closeMenu()">Gallery</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
@@ -525,14 +555,14 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
       <h2>Temple Destinations</h2>
     </div>
     <div class="tmpl-grid">
-      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1583947582886-f1ec71ded673?w=300&q=80" alt="Tirumala"/></div><div class="tc-name">Tirumala Temple</div></div>
-      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1562605266-78c4a6fa01d2?w=300&q=80" alt="Srikalahasti"/></div><div class="tc-name">Srikalahasti</div></div>
-      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1609780747274-31eab1b78827?w=300&q=80" alt="Kanipakam"/></div><div class="tc-name">Kanipakam</div></div>
-      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=300&q=80" alt="Golden Temple"/></div><div class="tc-name">Golden Temple Vellore</div></div>
-      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1599030327463-ebdfe4ffbfe8?w=300&q=80" alt="Arunachalam"/></div><div class="tc-name">Arunachalam</div></div>
-      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1574125368545-0696e38e18c8?w=300&q=80" alt="Kanchi"/></div><div class="tc-name">Kanchi</div></div>
-      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=300&q=80" alt="Rameshwaram"/></div><div class="tc-name">Rameshwaram</div></div>
-      <div class="tc rv"><div class="tc-img"><img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=300&q=80" alt="Srirangam"/></div><div class="tc-name">Srirangam</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://3.imimg.com/data3/AO/CK/MDC-5726533/cityimages-115-130-1356519843-500x500.jpg" alt="Tirumala"/></div><div class="tc-name">Tirumala Temple</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://www.saiprashnavali.com/wp-content/uploads/2020/04/Srikalahasti-Temple-Timings.jpg" alt="Srikalahasti"/></div><div class="tc-name">Srikalahasti</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://live.staticflickr.com/5634/22472587031_14c3aa84f4_b.jpg" alt="Kanipakam"/></div><div class="tc-name">Kanipakam</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://famoustemplesofindia.com/wp-content/uploads/2024/06/Golden-Temple-Vellore-1-1024x768.jpg" alt="Golden Temple"/></div><div class="tc-name">Golden Temple Vellore</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://www.templepurohit.com/wp-content/uploads/2015/09/Sri-Kalahasti-Temple-e1455511300537.jpg" alt="Arunachalam"/></div><div class="tc-name">Arunachalam</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://temple.yatradham.org/public/Product/temple/temple_spkb15CZ_202408251324480.jpg" alt="Kanchi"/></div><div class="tc-name">Kanchi</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://www.templepurohit.com/wp-content/uploads/2015/02/Ramanathaswamy-temple-Rameswaram-Tamil-nadu-e1481445517760.jpg" alt="Rameshwaram"/></div><div class="tc-name">Rameshwaram</div></div>
+      <div class="tc rv"><div class="tc-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Srirangam-Rajagopuram-1.jpg/500px-Srirangam-Rajagopuram-1.jpg" alt="Srirangam"/></div><div class="tc-name">Srirangam</div></div>
     </div>
   </div>
 </section>
@@ -545,11 +575,136 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
       <h2>Temmala Sightseeing</h2>
     </div>
     <div class="sg-grid">
-      <div class="sc rv"><img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=400&q=80" alt="Akasa Ganga"/><div class="sc-lbl">Akasa Ganga</div></div>
-      <div class="sc rv"><img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&q=80" alt="Silathoranam"/><div class="sc-lbl">Silathoranam</div></div>
-      <div class="sc rv"><img src="https://images.unsplash.com/photo-1432958576632-8a39f6b97dc7?w=400&q=80" alt="Chakra Theertham"/><div class="sc-lbl">Chakra Theertham</div></div>
-      <div class="sc rv"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Papavinasanam"/><div class="sc-lbl">Papavinasanam</div></div>
-      <div class="sc rv"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=80" alt="Srivari Museum"/><div class="sc-lbl">Srivari Museum</div></div>
+      <div class="sc rv"><img src="https://i.pinimg.com/originals/28/cf/77/28cf7745929f637187b79b5384010bfa.jpg" alt="Akasa Ganga"/><div class="sc-lbl">Akasa Ganga</div></div>
+      <div class="sc rv"><img src="https://i.pinimg.com/originals/3d/df/c8/3ddfc8b802183aa41fe514b42a9a89e6.jpg" alt="Silathoranam"/><div class="sc-lbl">Silathoranam</div></div>
+      <div class="sc rv"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/78/d4/c7/apsara-vihar.jpg?w=1000&h=1000&s=1" alt="Chakra Theertham"/><div class="sc-lbl">Chakra Theertham</div></div>
+      <div class="sc rv"><img src="https://1.bp.blogspot.com/-coV5vdtiowo/XDGWgSId2FI/AAAAAAABQHU/Um5kk6VuTewMWhcH4neDKvEz6l5gpkP_wCEwYBhgL/s1600/IMG_20170621_162615%2B%25281%2529.jpg" alt="Papavinasanam"/><div class="sc-lbl">Papavinasanam</div></div>
+      <div class="sc rv"><img src="https://www.rajasthantourplanner.com/blog/wp-content/uploads/2020/12/Sri-Vari-Museum.jpg" alt="Srivari Museum"/><div class="sc-lbl">Srivari Museum</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POPULAR DESTINATIONS ===== -->
+<section id="destinations" class="destinations-section">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;margin-bottom:48px">
+    <div class="sh wh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Popular Destinations</h2>
+      <p>Explore our sacred and scenic pilgrimage destinations</p>
+    </div>
+  </div>
+  <div class="destinations-grid">
+    <div class="destination-card rv">
+      <img src="https://3.imimg.com/data3/AO/CK/MDC-5726533/cityimages-115-130-1356519843-500x500.jpg" alt="Tirumala" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Tirumala Temple</div>
+        <div class="destination-highlight">Most sacred destination</div>
+      </div>
+    </div>
+
+    <div class="destination-card rv">
+      <img src="https://www.saiprashnavali.com/wp-content/uploads/2020/04/Srikalahasti-Temple-Timings.jpg" alt="Srikalahasti" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Srikalahasti</div>
+        <div class="destination-highlight">Historic temple heritage</div>
+      </div>
+    </div>
+
+    <div class="destination-card rv">
+      <img src="https://live.staticflickr.com/5634/22472587031_14c3aa84f4_b.jpg" alt="Kanipakam" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Kanipakam</div>
+        <div class="destination-highlight">Self-manifested deity</div>
+      </div>
+    </div>
+
+    <div class="destination-card rv">
+      <img src="https://famoustemplesofindia.com/wp-content/uploads/2024/06/Golden-Temple-Vellore-1-1024x768.jpg" alt="Golden Temple Vellore" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Golden Temple Vellore</div>
+        <div class="destination-highlight">Golden domes & gardens</div>
+      </div>
+    </div>
+
+    <div class="destination-card rv">
+      <img src="https://www.templepurohit.com/wp-content/uploads/2015/09/Sri-Kalahasti-Temple-e1455511300537.jpg" alt="Arunachalam" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Arunachalam</div>
+        <div class="destination-highlight">Sacred hill temple</div>
+      </div>
+    </div>
+
+    <div class="destination-card rv">
+      <img src="https://www.templepurohit.com/wp-content/uploads/2015/02/Ramanathaswamy-temple-Rameswaram-Tamil-nadu-e1481445517760.jpg" alt="Rameshwaram" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Rameshwaram</div>
+        <div class="destination-highlight">Holy island pilgrimage</div>
+      </div>
+    </div>
+
+    <div class="destination-card rv">
+      <img src="https://i.pinimg.com/originals/88/6b/2e/886b2e5e2119a082fdd7589d30768168.jpg" alt="Chandragiri Fort" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Chandragiri Fort</div>
+        <div class="destination-highlight">Historic fortress temple</div>
+      </div>
+    </div>
+
+    <div class="destination-card rv">
+      <img src="https://indiano.travel/wp-content/uploads/2022/04/Feature-image-6.jpg" alt="Padmavati Temple" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Padmavati Temple</div>
+        <div class="destination-highlight">Consort of Lord Venkateswara</div>
+      </div>
+    </div>
+
+    <div class="destination-card rv">
+      <img src="https://2.bp.blogspot.com/-M2SCOhC3bto/VCagDxgQdJI/AAAAAAAAE_4/Fqnn9yY6dEY/s1600/Sreenivasa_mangapuram_temple.jpg" alt="Srinivasa Mangapuram" class="destination-image">
+      <div class="destination-overlay">
+        <div class="destination-name">Srinivasa Mangapuram</div>
+        <div class="destination-highlight">Scenic pilgrimage hill</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR FLEET ===== -->
+<section id="fleet" class="fleet-section sec">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="sh rv">
+      <div class="orn"><i class="fas fa-star"></i></div>
+      <h2>Our Premium Fleet</h2>
+      <p>Travel in comfort with our well-maintained and modern vehicles</p>
+    </div>
+
+    <!-- FEATURED VEHICLE -->
+    <div class="fleet-featured rv" style="margin-bottom:60px;max-width:1280px;margin-left:auto;margin-right:auto;padding:0 24px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+        <div style="border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg)">
+          <img src="https://stimg.cardekho.com/images/car-images/930x620/Toyota/Innova-Crysta/9612/1680600172230/221_super-white_e8e8e8.jpg?tr=w-898" alt="Toyota Innova" style="width:100%;height:400px;object-fit:cover;">
+        </div>
+        <div>
+          <div class="orn" style="justify-content:flex-start"><i class="fas fa-star"></i></div>
+          <h3 style="font-size:1.6rem;font-weight:800;color:var(--navy);margin:16px 0;text-transform:uppercase">Toyota Innova Crysta</h3>
+          <p style="color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:20px">
+            Experience premium comfort with our flagship Toyota Innova Crysta. Perfect for family tours, group travels, and long journeys with ample seating, air-conditioning, and modern amenities.
+          </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--navy);font-weight:600">
+              <i class="fas fa-users" style="color:var(--gold);font-size:1rem"></i>Seating: 8 Passengers
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--navy);font-weight:600">
+              <i class="fas fa-wind" style="color:var(--gold);font-size:1rem"></i>Full AC & Comfort
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--navy);font-weight:600">
+              <i class="fas fa-road" style="color:var(--gold);font-size:1rem"></i>Long Distance Ready
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--navy);font-weight:600">
+              <i class="fas fa-heart" style="color:var(--gold);font-size:1rem"></i>Well Maintained
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -646,24 +801,6 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
   </div>
 </section>
 
-<!-- ===== GALLERY ===== -->
-<section id="gallery" class="sec sec-navy">
-  <div class="ctr">
-    <div class="sh wh rv">
-      <div class="orn"><i class="fas fa-star"></i></div>
-      <h2>Gallery</h2>
-    </div>
-    <div class="gal-grid">
-      <div class="gi rv"><img src="https://images.unsplash.com/photo-1583947582886-f1ec71ded673?w=600&q=80" alt="Tirumala"/><div class="gi-ov"><span>Tirumala Temple</span></div></div>
-      <div class="gi rv"><img src="https://images.unsplash.com/photo-1562605266-78c4a6fa01d2?w=500&q=80" alt="Gopuram"/><div class="gi-ov"><span>Sacred Gopuram</span></div></div>
-      <div class="gi rv"><img src="https://images.unsplash.com/photo-1432958576632-8a39f6b97dc7?w=500&q=80" alt="Waterfall"/><div class="gi-ov"><span>Tirumala Waterfall</span></div></div>
-      <div class="gi rv"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&q=80" alt="Vehicle"/><div class="gi-ov"><span>Premium Fleet</span></div></div>
-      <div class="gi rv"><img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=600&q=80" alt="Hills"/><div class="gi-ov"><span>Tirumala Hills</span></div></div>
-      <div class="gi rv"><img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=500&q=80" alt="Rameshwaram"/><div class="gi-ov"><span>Rameshwaram</span></div></div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== CONTACT ===== -->
 <section id="contact" class="sec">
   <div class="ctr">
@@ -721,9 +858,9 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 0 0}
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#fleet">Fleet</a></li>
           <li><a href="#booking">Packages</a></li>
-          <li><a href="#temples">Temple Tours</a></li>
-          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
